@@ -5283,6 +5283,331 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "home",
@@ -28061,7 +28386,27 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("Header"), _vm._v(" "), _vm._m(0)], 1)
+  return _c(
+    "div",
+    [
+      _c("Header"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _vm._m(3),
+      _vm._v(" "),
+      _vm._m(4),
+      _vm._v(" "),
+      _vm._m(5),
+      _vm._v(" "),
+      _vm._m(6),
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function () {
@@ -28092,6 +28437,778 @@ var staticRenderFns = [
         ]),
       ]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "bg-light" }, [
+      _c("div", { staticClass: "page-section py-3 mt-md-n5 custom-index" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-md-4 py-3 py-md-0" }, [
+              _c("div", { staticClass: "card-service wow fadeInUp" }, [
+                _c(
+                  "div",
+                  { staticClass: "circle-shape bg-secondary text-white" },
+                  [_c("span", { staticClass: "mai-chatbubbles-outline" })]
+                ),
+                _vm._v(" "),
+                _c("p", [
+                  _c("span", [_vm._v("Chat")]),
+                  _vm._v(" with a doctors"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4 py-3 py-md-0" }, [
+              _c("div", { staticClass: "card-service wow fadeInUp" }, [
+                _c(
+                  "div",
+                  { staticClass: "circle-shape bg-primary text-white" },
+                  [_c("span", { staticClass: "mai-shield-checkmark" })]
+                ),
+                _vm._v(" "),
+                _c("p", [
+                  _c("span", [_vm._v("One")]),
+                  _vm._v("-Health Protection"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4 py-3 py-md-0" }, [
+              _c("div", { staticClass: "card-service wow fadeInUp" }, [
+                _c(
+                  "div",
+                  { staticClass: "circle-shape bg-accent text-white" },
+                  [_c("span", { staticClass: "mai-basket" })]
+                ),
+                _vm._v(" "),
+                _c("p", [
+                  _c("span", [_vm._v("One")]),
+                  _vm._v("-Health Pharmacy"),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "page-section pb-0" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("div", { staticClass: "col-lg-6 py-3 wow fadeInUp" }, [
+              _c("h1", [
+                _vm._v("Welcome to Your Health "),
+                _c("br"),
+                _vm._v(" Center"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-grey mb-4" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!"
+                ),
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { href: "about.html" },
+                },
+                [_vm._v("Learn More")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-lg-6 wow fadeInRight",
+                attrs: { "data-wow-delay": "400ms" },
+              },
+              [
+                _c("div", { staticClass: "img-place custom-img-1" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/bg-doctor.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                      alt: "",
+                    },
+                  }),
+                ]),
+              ]
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-section" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "text-center mb-5 wow fadeInUp" }, [
+          _vm._v("Our Doctors"),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "owl-carousel wow fadeInUp",
+            attrs: { id: "doctorSlideshow" },
+          },
+          [
+            _c("div", { staticClass: "item" }, [
+              _c("div", { staticClass: "card-doctor" }, [
+                _c("div", { staticClass: "header" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "meta" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-call" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-logo-whatsapp" }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "body" }, [
+                  _c("p", { staticClass: "text-xl mb-0" }, [
+                    _vm._v("Dr. Stein Albert"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text-sm text-grey" }, [
+                    _vm._v("Cardiology"),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "item" }, [
+              _c("div", { staticClass: "card-doctor" }, [
+                _c("div", { staticClass: "header" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "meta" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-call" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-logo-whatsapp" }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "body" }, [
+                  _c("p", { staticClass: "text-xl mb-0" }, [
+                    _vm._v("Dr. Alexa Melvin"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text-sm text-grey" }, [
+                    _vm._v("Dental"),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "item" }, [
+              _c("div", { staticClass: "card-doctor" }, [
+                _c("div", { staticClass: "header" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "meta" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-call" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-logo-whatsapp" }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "body" }, [
+                  _c("p", { staticClass: "text-xl mb-0" }, [
+                    _vm._v("Dr. Rebecca Steffany"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text-sm text-grey" }, [
+                    _vm._v("General Health"),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "item" }, [
+              _c("div", { staticClass: "card-doctor" }, [
+                _c("div", { staticClass: "header" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "meta" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-call" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-logo-whatsapp" }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "body" }, [
+                  _c("p", { staticClass: "text-xl mb-0" }, [
+                    _vm._v("Dr. Rebecca Steffany"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text-sm text-grey" }, [
+                    _vm._v("General Health"),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "item" }, [
+              _c("div", { staticClass: "card-doctor" }, [
+                _c("div", { staticClass: "header" }, [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "meta" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-call" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("span", { staticClass: "mai-logo-whatsapp" }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "body" }, [
+                  _c("p", { staticClass: "text-xl mb-0" }, [
+                    _vm._v("Dr. Rebecca Steffany"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text-sm text-grey" }, [
+                    _vm._v("General Health"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-section bg-light" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "text-center wow fadeInUp" }, [
+          _vm._v("Latest News"),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-5" }, [
+          _c("div", { staticClass: "col-lg-4 py-2 wow zoomIn" }, [
+            _c("div", { staticClass: "card-blog" }, [
+              _c("div", { staticClass: "header" }, [
+                _c("div", { staticClass: "post-category" }, [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Covid19")]),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "post-thumb",
+                    attrs: { href: "blog-details.html" },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/blog/blog_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                        alt: "",
+                      },
+                    }),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "body" }, [
+                _c("h5", { staticClass: "post-title" }, [
+                  _c("a", { attrs: { href: "blog-details.html" } }, [
+                    _vm._v("List of Countries without Coronavirus case"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "site-info" }, [
+                  _c("div", { staticClass: "avatar mr-2" }, [
+                    _c("div", { staticClass: "avatar-img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/person/person_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                          alt: "",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Roger Adams")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mai-time" }),
+                  _vm._v(" 1 week ago\n              "),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4 py-2 wow zoomIn" }, [
+            _c("div", { staticClass: "card-blog" }, [
+              _c("div", { staticClass: "header" }, [
+                _c("div", { staticClass: "post-category" }, [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Covid19")]),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "post-thumb",
+                    attrs: { href: "blog-details.html" },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/blog/blog_2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                        alt: "",
+                      },
+                    }),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "body" }, [
+                _c("h5", { staticClass: "post-title" }, [
+                  _c("a", { attrs: { href: "blog-details.html" } }, [
+                    _vm._v("Recovery Room: News beyond the pandemic"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "site-info" }, [
+                  _c("div", { staticClass: "avatar mr-2" }, [
+                    _c("div", { staticClass: "avatar-img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/person/person_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                          alt: "",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Roger Adams")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mai-time" }),
+                  _vm._v(" 4 weeks ago\n              "),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4 py-2 wow zoomIn" }, [
+            _c("div", { staticClass: "card-blog" }, [
+              _c("div", { staticClass: "header" }, [
+                _c("div", { staticClass: "post-category" }, [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Covid19")]),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "post-thumb",
+                    attrs: { href: "blog-details.html" },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/blog/blog_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                        alt: "",
+                      },
+                    }),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "body" }, [
+                _c("h5", { staticClass: "post-title" }, [
+                  _c("a", { attrs: { href: "blog-details.html" } }, [
+                    _vm._v("What is the impact of eating too much sugar?"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "site-info" }, [
+                  _c("div", { staticClass: "avatar mr-2" }, [
+                    _c("div", { staticClass: "avatar-img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/person/person_2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                          alt: "",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Diego Simmons")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mai-time" }),
+                  _vm._v(" 2 months ago\n              "),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 text-center mt-4 wow zoomIn" }, [
+            _c(
+              "a",
+              { staticClass: "btn btn-primary", attrs: { href: "blog.html" } },
+              [_vm._v("Read More")]
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-section" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "text-center wow fadeInUp" }, [
+          _vm._v("Make an Appointment"),
+        ]),
+        _vm._v(" "),
+        _c("form", { staticClass: "main-form" }, [
+          _c("div", { staticClass: "row mt-5 " }, [
+            _c("div", { staticClass: "col-12 col-sm-6 py-2 wow fadeInLeft" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Full name" },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-sm-6 py-2 wow fadeInRight" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Email address.." },
+              }),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-12 col-sm-6 py-2 wow fadeInLeft",
+                attrs: { "data-wow-delay": "300ms" },
+              },
+              [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "date" },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-12 col-sm-6 py-2 wow fadeInRight",
+                attrs: { "data-wow-delay": "300ms" },
+              },
+              [
+                _c(
+                  "select",
+                  {
+                    staticClass: "custom-select",
+                    attrs: { name: "departement", id: "departement" },
+                  },
+                  [
+                    _c("option", { attrs: { value: "general" } }, [
+                      _vm._v("General Health"),
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "cardiology" } }, [
+                      _vm._v("Cardiology"),
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "dental" } }, [
+                      _vm._v("Dental"),
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "neurology" } }, [
+                      _vm._v("Neurology"),
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "orthopaedics" } }, [
+                      _vm._v("Orthopaedics"),
+                    ]),
+                  ]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-12 py-2 wow fadeInUp",
+                attrs: { "data-wow-delay": "300ms" },
+              },
+              [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", placeholder: "Number.." },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-12 py-2 wow fadeInUp",
+                attrs: { "data-wow-delay": "300ms" },
+              },
+              [
+                _c("textarea", {
+                  staticClass: "form-control",
+                  attrs: {
+                    name: "message",
+                    id: "message",
+                    rows: "6",
+                    placeholder: "Enter message..",
+                  },
+                }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary mt-3 wow zoomIn",
+              attrs: { type: "submit" },
+            },
+            [_vm._v("Submit Request")]
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "page-section banner-home bg-image",
+        staticStyle: {
+          "background-image": "url(../assets/img/banner-pattern.svg)",
+        },
+      },
+      [
+        _c("div", { staticClass: "container py-5 py-lg-0" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("div", { staticClass: "col-lg-4 wow zoomIn" }, [
+              _c("div", { staticClass: "img-banner d-none d-lg-block" }, [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/mobile_app.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                    alt: "",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-8 wow fadeInRight" }, [
+              _c("h1", { staticClass: "font-weight-normal mb-3" }, [
+                _vm._v(
+                  "Get easy access of all features using One Health Application"
+                ),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/google_play.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                    alt: "",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "ml-2", attrs: { href: "#" } }, [
+                _c("img", {
+                  attrs: {
+                    src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/app_store.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                    alt: "",
+                  },
+                }),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", { staticClass: "page-footer" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row px-md-3" }, [
+          _c("div", { staticClass: "col-sm-6 col-lg-3 py-3" }, [
+            _c("h5", [_vm._v("Company")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "footer-menu" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("About Us")]),
+              ]),
+              _vm._v(" "),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Career")])]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Editorial Team")]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Protection")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6 col-lg-3 py-3" }, [
+            _c("h5", [_vm._v("More")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "footer-menu" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v("Terms & Condition"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Privacy")]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Advertise")]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Join as Doctors")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6 col-lg-3 py-3" }, [
+            _c("h5", [_vm._v("Our partner")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "footer-menu" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("One-Fitness")]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("One-Drugs")]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("One-Live")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6 col-lg-3 py-3" }, [
+            _c("h5", [_vm._v("Contact")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "footer-link mt-2" }, [
+              _vm._v("351 Willow Street Franklin, MA 02038"),
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "footer-link", attrs: { href: "#" } }, [
+              _vm._v("701-573-7582"),
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "footer-link", attrs: { href: "#" } }, [
+              _vm._v("healthcare@temporary.net"),
+            ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "mt-3" }, [_vm._v("Social Media")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "footer-sosmed mt-3" }, [
+              _c("a", { attrs: { href: "#", target: "_blank" } }, [
+                _c("span", { staticClass: "mai-logo-facebook-f" }),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#", target: "_blank" } }, [
+                _c("span", { staticClass: "mai-logo-twitter" }),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#", target: "_blank" } }, [
+                _c("span", { staticClass: "mai-logo-google-plus-g" }),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#", target: "_blank" } }, [
+                _c("span", { staticClass: "mai-logo-instagram" }),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#", target: "_blank" } }, [
+                _c("span", { staticClass: "mai-logo-linkedin" }),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("p", { attrs: { id: "copyright" } }, [
+          _vm._v("Copyright © 2020 "),
+          _c(
+            "a",
+            { attrs: { href: "https://macodeid.com/", target: "_blank" } },
+            [_vm._v("MACode ID")]
+          ),
+          _vm._v(". All right reserved"),
+        ]),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
