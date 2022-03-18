@@ -18,5 +18,5 @@
         </div>
     </body>
     <script src="{{ mix('/js/app.js') }}"></script>
-    <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 </html>
