@@ -28529,10 +28529,7 @@ var staticRenderFns = [
               [
                 _c("div", { staticClass: "img-place custom-img-1" }, [
                   _c("img", {
-                    attrs: {
-                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/bg-doctor.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                      alt: "",
-                    },
+                    attrs: { src: "assets/img/bg-doctor.png", alt: "" },
                   }),
                 ]),
               ]
@@ -28563,10 +28560,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-doctor" }, [
                 _c("div", { staticClass: "header" }, [
                   _c("img", {
-                    attrs: {
-                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                      alt: "",
-                    },
+                    attrs: { src: "assets/img/doctors/doctor_1.jpg", alt: "" },
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "meta" }, [
@@ -28596,10 +28590,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-doctor" }, [
                 _c("div", { staticClass: "header" }, [
                   _c("img", {
-                    attrs: {
-                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                      alt: "",
-                    },
+                    attrs: { src: "assets/img/doctors/doctor_2.jpg", alt: "" },
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "meta" }, [
@@ -28629,10 +28620,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-doctor" }, [
                 _c("div", { staticClass: "header" }, [
                   _c("img", {
-                    attrs: {
-                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                      alt: "",
-                    },
+                    attrs: { src: "assets/img/doctors/doctor_3.jpg", alt: "" },
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "meta" }, [
@@ -28662,10 +28650,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-doctor" }, [
                 _c("div", { staticClass: "header" }, [
                   _c("img", {
-                    attrs: {
-                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                      alt: "",
-                    },
+                    attrs: { src: "assets/img/doctors/doctor_3.jpg", alt: "" },
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "meta" }, [
@@ -28695,10 +28680,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-doctor" }, [
                 _c("div", { staticClass: "header" }, [
                   _c("img", {
-                    attrs: {
-                      src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/doctors/doctor_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                      alt: "",
-                    },
+                    attrs: { src: "assets/img/doctors/doctor_3.jpg", alt: "" },
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "meta" }, [
@@ -28754,10 +28736,7 @@ var staticRenderFns = [
                   },
                   [
                     _c("img", {
-                      attrs: {
-                        src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/blog/blog_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                        alt: "",
-                      },
+                      attrs: { src: "assets/img/blog/blog_1.jpg", alt: "" },
                     }),
                   ]
                 ),
@@ -28775,7 +28754,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "avatar-img" }, [
                       _c("img", {
                         attrs: {
-                          src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/person/person_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                          src: "assets/img/person/person_1.jpg",
                           alt: "",
                         },
                       }),
@@ -28806,10 +28785,7 @@ var staticRenderFns = [
                   },
                   [
                     _c("img", {
-                      attrs: {
-                        src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/blog/blog_2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                        alt: "",
-                      },
+                      attrs: { src: "assets/img/blog/blog_2.jpg", alt: "" },
                     }),
                   ]
                 ),
@@ -28827,7 +28803,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "avatar-img" }, [
                       _c("img", {
                         attrs: {
-                          src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/person/person_1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                          src: "assets/img/person/person_1.jpg",
                           alt: "",
                         },
                       }),
@@ -28858,10 +28834,7 @@ var staticRenderFns = [
                   },
                   [
                     _c("img", {
-                      attrs: {
-                        src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/blog/blog_3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                        alt: "",
-                      },
+                      attrs: { src: "assets/img/blog/blog_3.jpg", alt: "" },
                     }),
                   ]
                 ),
@@ -28879,7 +28852,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "avatar-img" }, [
                       _c("img", {
                         attrs: {
-                          src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/person/person_2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                          src: "assets/img/person/person_2.jpg",
                           alt: "",
                         },
                       }),
@@ -29048,10 +29021,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-lg-4 wow zoomIn" }, [
               _c("div", { staticClass: "img-banner d-none d-lg-block" }, [
                 _c("img", {
-                  attrs: {
-                    src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/mobile_app.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                    alt: "",
-                  },
+                  attrs: { src: "assets/img/mobile_app.png", alt: "" },
                 }),
               ]),
             ]),
@@ -29065,19 +29035,13 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("a", { attrs: { href: "#" } }, [
                 _c("img", {
-                  attrs: {
-                    src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/google_play.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                    alt: "",
-                  },
+                  attrs: { src: "assets/img/google_play.svg", alt: "" },
                 }),
               ]),
               _vm._v(" "),
               _c("a", { staticClass: "ml-2", attrs: { href: "#" } }, [
                 _c("img", {
-                  attrs: {
-                    src: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../assets/img/app_store.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-                    alt: "",
-                  },
+                  attrs: { src: "assets/img/app_store.svg", alt: "" },
                 }),
               ]),
             ]),
