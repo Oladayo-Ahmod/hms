@@ -22929,9 +22929,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+ // createApp(App).use(router).mount('#app')
 
 var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({});
 app.component('home-component', _components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_1__["default"]);
+app.use(_Router_index__WEBPACK_IMPORTED_MODULE_2__["default"]);
 app.mount("#app");
 
 /***/ }),
