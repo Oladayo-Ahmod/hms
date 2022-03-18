@@ -5271,6 +5271,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "home",
@@ -28049,9 +28061,39 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Header")
+  return _c("div", [_c("Header"), _vm._v(" "), _vm._m(0)], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "page-hero bg-image overlay-dark",
+        staticStyle: {
+          "background-image": "url(../assets/img/bg_image_1.jpg)",
+        },
+      },
+      [
+        _c("div", { staticClass: "hero-section" }, [
+          _c("div", { staticClass: "container text-center wow zoomIn" }, [
+            _c("span", { staticClass: "subhead" }, [
+              _vm._v("Let's make your life happier"),
+            ]),
+            _vm._v(" "),
+            _c("h1", { staticClass: "display-4" }, [_vm._v("Healthy Living")]),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
+              _vm._v("Let's Consult"),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
