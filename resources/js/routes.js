@@ -4,7 +4,7 @@
 const routes = [
 
     {
-        path : '',
+        path : '/',
         component : Home,
         name : "home"
     },
