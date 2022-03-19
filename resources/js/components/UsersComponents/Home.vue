@@ -1,6 +1,8 @@
 <template>
 <div>
 <Header /> 
+<!-- <router-view></router-view> -->
+
 <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
@@ -10,7 +12,6 @@
       </div>
     </div>
   </div>
-
     <div class="bg-light">
     <div class="page-section py-3 mt-md-n5 custom-index">
       <div class="container">
@@ -283,8 +284,9 @@
       </div>
     </div>
   </div> <!-- .banner-home -->
-
 <Footer />
+
+
 </div>
  
 </template>
