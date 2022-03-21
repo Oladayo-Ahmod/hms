@@ -22856,7 +22856,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Header), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-view></router-view> "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .bg-light "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-section "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-section "), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
+  var _component_RouterView = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("RouterView");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Header), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-view></router-view> "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .bg-light "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-section "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-section "), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RouterView)], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -22963,8 +22967,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/UsersComponents/Home */ "./resources/js/components/UsersComponents/Home.vue");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
+/* harmony import */ var _components_UsersComponents_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/UsersComponents/Home.vue */ "./resources/js/components/UsersComponents/Home.vue");
+/* harmony import */ var _components_UsersComponents_About_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/UsersComponents/About.vue */ "./resources/js/components/UsersComponents/About.vue");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
@@ -22972,8 +22977,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_1__["default"]);
-app.use(_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
+  components: {
+    Home: _components_UsersComponents_Home_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    About: _components_UsersComponents_About_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }
+});
+app.use(_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
 app.mount("#app"); // import components from  './components';
 // createApp(App).use(router).mount('#app')
 // createApp(vueRouter).use(router).mount('#app')
@@ -23036,18 +23047,20 @@ __webpack_require__.r(__webpack_exports__);
 
  // import routes from '../routes'
 
-var routes = [{
-  path: '/',
-  component: _components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_0__["default"],
-  name: "home"
-}, {
-  path: '/about',
-  component: _components_UsersComponents_About__WEBPACK_IMPORTED_MODULE_1__["default"],
-  name: "about"
-}];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createWebHistory)(),
-  routes: routes
+  routes: [{
+    path: "/",
+    name: "home",
+    component: _components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }, {
+    path: "/about",
+    name: "about",
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: _components_UsersComponents_About__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
 

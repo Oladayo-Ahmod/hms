@@ -14,6 +14,7 @@
     <body class="antialiased">
         @yield('content')
 
+
 </body>
 <script src="{{ mix('/js/app.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
