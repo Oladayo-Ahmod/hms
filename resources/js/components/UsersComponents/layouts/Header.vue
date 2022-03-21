@@ -47,10 +47,9 @@
               <a class="nav-link" href="home">Home</a>
             </li>
             <li class="nav-item">
-              <router-link to="/about">
-              About us
+              <router-link to="/about" class="nav-link">
+                <a class="nav-link" href="#">About Us</a>
               </router-link>
-              <!-- <a class="nav-link" href="about.html">About Us</a> -->
             </li>
             <li class="nav-item">
               <a class="nav-link" href="doctors.html">Doctors</a>
