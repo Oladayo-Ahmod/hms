@@ -22970,9 +22970,15 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
- // createApp(App).use(router).mount('#app')
 
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_1__["default"]).use(_router__WEBPACK_IMPORTED_MODULE_2__["default"]).mount('#app');
+
+var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_1__["default"]);
+app.use(_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
+app.mount("#app"); // import components from  './components';
+// createApp(App).use(router).mount('#app')
+// createApp(vueRouter).use(router).mount('#app')
+// const app = new Vue({
+// })
 
 /***/ }),
 
