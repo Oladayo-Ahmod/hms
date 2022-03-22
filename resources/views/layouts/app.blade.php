@@ -1,11 +1,11 @@
-
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hospital Management System</title>
        
-        @if (Request::is('admin'))
+        @if (Request::is('admin') || Request::is('admin/'))
                <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('adminAssets/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('adminAssets/vendors/css/vendor.bundle.base.css')}}">
@@ -35,7 +35,7 @@
         @yield('content')
     
         <script src="{{ mix('/js/app.js') }}"></script>       
-        @if(Request::is('admin') )
+        @if(Request::is('admin') || Request::is('admin/'))
         
         <script src="{{ asset ('assets/js/jquery-3.5.1.min.js')}}"></script>
         
