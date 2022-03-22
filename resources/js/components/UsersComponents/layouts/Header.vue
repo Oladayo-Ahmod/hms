@@ -52,13 +52,19 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <router-link to="/doctors" class="nav-link">
+                <a class="nav-link" href="#">Doctors</a>
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
+              <router-link to="/blog" class="nav-link">
+                <a class="nav-link" href="#">News</a>
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <router-link to="/contact" class="nav-link">
+                <a class="nav-link" href="#">Contact</a>
+              </router-link>
             </li>
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="#">Login / Register</a>
