@@ -37,44 +37,44 @@
     <body class="antialiased">
         @yield('content')
     
-       
+        <script src="{{ mix('/js/app.js') }}"></script>       
+        @if(Request::is('admin') )
         
+        <script src="{{ asset ('assets/js/jquery-3.5.1.min.js')}}"></script>
+        
+         <!-- plugins:js -->
+         {{-- <script src="{{asset ('adminAssets/vendors/js/vendor.bundle.base.js')}}"></script> --}}
+         <!-- endinject -->
+         <!-- Plugin js for this page -->
+         <script src="{{ asset('adminAssets/vendors/chart.js/Chart.min.js')}}" type="text/javascript"></script>
+         <script src="{{asset('adminAssets/vendors/progressbar.js/progressbar.min.js')}}" type="text/javascript"></script>
+         <script src="{{asset('adminAssets/vendors/jvectormap/jquery-jvectormap.min.js')}}"></script>
+         <script src="{{asset('adminAssets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+         <script src="{{asset('adminAssets/vendors/owl-carousel-2/owl.carousel.min.js')}}"></script>
+         <script src="{{asset('adminAssets/js/jquery.cookie.js')}}" type="text/javascript"></script>
+         <!-- End plugin js for this page -->
+         <!-- inject:js -->
+         <script src="{{ asset('adminAssets/js/off-canvas.js')}}"></script>
+         <script src="{{asset('adminAssets/js/hoverable-collapse.js')}}"></script>
+         <script src="{{asset('adminAssets/js/misc.js')}}"></script>
+         <script src="{{asset('adminAssets/js/settings.js')}}"></script>
+         <script src="{{asset('adminAssets/js/todolist.js')}}"></script>
+         <!-- endinject -->
+         <!-- Custom js for this page -->
+         <script src="{{asset('assets/js/dashboard.js')}}"></script>
+         <!-- End custom js for this page -->
+        
+        @else
+        <script src="{{ mix('/js/app.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{asset('assets/vendor/owl-carousel/js/owl.carousel.min.js')}}"></script>
+        <script src="{{ asset('assets/vendor/wow/wow.min.js')}}"></script>
+        <script src="../assets/js/theme.js"></script>
+        <script src="{{ asset('assets/js/theme.js')}}"></script>
+        <script src="{{ asset('assets/js/google-maps.js')}}"></script>
+        @endif        
 
 </body>
 
-@if(Request::is('admin') )
-<script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
-
- <!-- plugins:js -->
- <script src="{{asset('adminAssets/vendors/js/vendor.bundle.base.js')}}"></script>
- <!-- endinject -->
- <!-- Plugin js for this page -->
- <script src="{{asset('adminAssets/vendors/chart.js/Chart.min.js')}}"></script>
- <script src="{{asset('adminAssets/vendors/progressbar.js/progressbar.min.js')}}"></script>
- <script src="{{asset('adminAssets/vendors/jvectormap/jquery-jvectormap.min.js')}}"></script>
- <script src="{{asset('adminAssets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
- <script src="{{asset('adminAssets/vendors/owl-carousel-2/owl.carousel.min.js')}}"></script>
- <script src="{{asset('adminAssets/js/jquery.cookie.js')}}" type="text/javascript"></script>
- <!-- End plugin js for this page -->
- <!-- inject:js -->
- <script src="{{ asset('adminAssets/js/off-canvas.js')}}"></script>
- <script src="{{asset('adminAssets/js/hoverable-collapse.js')}}"></script>
- <script src="{{asset('adminAssets/js/misc.js')}}"></script>
- <script src="{{asset('adminAssets/js/settings.js')}}"></script>
- <script src="{{asset('adminAssets/js/todolist.js')}}"></script>
- <!-- endinject -->
- <!-- Custom js for this page -->
- <script src="{{asset('assets/js/dashboard.js')}}"></script>
- <!-- End custom js for this page -->
-
-@else
-<script src="{{ mix('/js/app.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
-<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{asset('assets/vendor/owl-carousel/js/owl.carousel.min.js')}}"></script>
-<script src="{{ asset('assets/vendor/wow/wow.min.js')}}"></script>
-<script src="../assets/js/theme.js"></script>
-<script src="{{ asset('assets/js/theme.js')}}"></script>
-<script src="{{ asset('assets/js/google-maps.js')}}"></script>
-@endif
 </html>
