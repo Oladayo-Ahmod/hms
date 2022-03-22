@@ -177,7 +177,7 @@
         </div>
       </div>
     </div>
-  </div> <!-- .banner-home -->
+  </div> 
   <Footer />
 </template>
 
