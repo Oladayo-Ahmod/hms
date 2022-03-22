@@ -1,7 +1,4 @@
-@php
-    use Illuminate\Support\Facades\Route;
-@endphp
-<!DOCTYPE html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -43,7 +40,7 @@
         <script src="{{ asset ('assets/js/jquery-3.5.1.min.js')}}"></script>
         
          <!-- plugins:js -->
-         {{-- <script src="{{asset ('adminAssets/vendors/js/vendor.bundle.base.js')}}"></script> --}}
+         <script src="{{asset ('adminAssets/vendors/js/vendor.bundle.base.js')}}"></script>
          <!-- endinject -->
          <!-- Plugin js for this page -->
          <script src="{{ asset('adminAssets/vendors/chart.js/Chart.min.js')}}" type="text/javascript"></script>
