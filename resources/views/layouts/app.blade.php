@@ -7,11 +7,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hospital Management System</title>
+       
+        @if (Request::is('admin'))
+               <!-- plugins:css -->
+    <link rel="stylesheet" href="{{asset('adminAssets/vendors/mdi/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminAssets/vendors/css/vendor.bundle.base.css')}}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{{asset('adminAssets/vendors/jvectormap/jquery-jvectormap.css')}}">
+    <link rel="stylesheet" href="{{asset('adminAssets/vendors/flag-icon-css/css/flag-icon.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminAssets/vendors/owl-carousel-2/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminAssets/vendors/owl-carousel-2/owl.theme.default.min.css')}}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+        @else
         <link rel="stylesheet" href="{{asset('assets/css/maicons.css')}}">
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css')}}">
         <link rel="stylesheet" href="{{asset('assets/vendor/owl-carousel/css/owl.carousel.css')}}">
         <link rel="stylesheet" href="{{asset('assets/vendor/animate/animate.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/theme.css')}}">
+        @endif
 
     </head>
     <body class="antialiased">
@@ -22,7 +42,9 @@
 
 </body>
 
-@if(Request::is('admin/') || Request::is('admin'))
+@if(Request::is('admin') )
+<script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+
  <!-- plugins:js -->
  <script src="{{asset('adminAssets/vendors/js/vendor.bundle.base.js')}}"></script>
  <!-- endinject -->
