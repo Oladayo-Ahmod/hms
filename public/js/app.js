@@ -23064,10 +23064,6 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.createRouter)({
     name: "home",
     component: _components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_0__["default"]
   }, {
-    path: "/home",
-    name: "home",
-    component: _components_UsersComponents_Home__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }, {
     path: "/about",
     name: "about",
     // route level code-splitting
