@@ -3,6 +3,7 @@ import Home from '../components/UsersComponents/Home'
 import About from '../components/UsersComponents/About'
 import Doctors from '../components/UsersComponents/Doctors'
 import Contact from '../components/UsersComponents/Contact'
+import Dashboard from '../components/AdminComponents/Dashboard'
 // import routes from '../routes'
 const router = createRouter({
   history: createWebHistory(),
