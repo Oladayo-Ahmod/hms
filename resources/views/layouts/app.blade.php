@@ -37,7 +37,7 @@
         <script src="{{ mix('/js/app.js') }}"></script>       
         @if(Request::is('admin') || Request::is('admin/'))
         
-        <script src="{{ asset ('assets/js/jquery-3.5.1.min.js')}}"></script>
+        {{-- <script src="{{ asset ('assets/js/jquery-3.5.1.min.js')}}"></script> --}}
         
          <!-- plugins:js -->
          <script src="{{asset ('adminAssets/vendors/js/vendor.bundle.base.js')}}"></script>

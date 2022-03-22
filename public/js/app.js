@@ -23394,8 +23394,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_UsersComponents_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/UsersComponents/Home.vue */ "./resources/js/components/UsersComponents/Home.vue");
 /* harmony import */ var _components_UsersComponents_About_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/UsersComponents/About.vue */ "./resources/js/components/UsersComponents/About.vue");
 /* harmony import */ var _components_UsersComponents_Doctors_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/UsersComponents/Doctors.vue */ "./resources/js/components/UsersComponents/Doctors.vue");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
+/* harmony import */ var _components_AdminComponents_Dashboard_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/AdminComponents/Dashboard.vue */ "./resources/js/components/AdminComponents/Dashboard.vue");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -23408,15 +23410,12 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   components: {
     Home: _components_UsersComponents_Home_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     About: _components_UsersComponents_About_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Doctors: _components_UsersComponents_Doctors_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    Doctors: _components_UsersComponents_Doctors_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Dashboard: _components_AdminComponents_Dashboard_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
-app.use(_router__WEBPACK_IMPORTED_MODULE_4__["default"]);
-app.mount("#app"); // import components from  './components';
-// createApp(App).use(router).mount('#app')
-// createApp(vueRouter).use(router).mount('#app')
-// const app = new Vue({
-// })
+app.use(_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
+app.mount("#app");
 
 /***/ }),
 
