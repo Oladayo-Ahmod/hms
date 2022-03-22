@@ -44,7 +44,9 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               
-              <a class="nav-link" href="home">Home</a>
+              <router-link to="/home" class="nav-link">
+                <a class="nav-link" href="#">Home</a>
+              </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/about" class="nav-link">
