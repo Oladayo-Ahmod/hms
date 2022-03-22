@@ -30,6 +30,12 @@ const router = createRouter({
       name: "contact",
       component: Contact,
     },
+    // admin routes
+    {
+      path : "/admin",
+      name : "admin",
+      component : Dashboard
+    }
   ],
 });
 
