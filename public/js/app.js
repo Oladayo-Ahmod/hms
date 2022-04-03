@@ -22903,6 +22903,15 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Footer: _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     Header: _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  data: function data() {
+    // let username = username.value
+    return {};
+  },
+  methods: {
+    register: function register() {
+      console.log('ss');
+    }
   }
 });
 
@@ -23332,13 +23341,6 @@ var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "btn btn-primary my-3"
-}, "Register", -1
-/* HOISTED */
-);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Header = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Header");
 
@@ -23357,8 +23359,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })]), _hoisted_8])]), _hoisted_9]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .container ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-section ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-banner "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" registration form "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "form-group",
-    onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
-      return _ctx.register();
+    onSubmit: _cache[5] || (_cache[5] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.register && $options.register.apply($options, arguments);
     }, ["prevent"])),
     action: "",
     method: "post"
@@ -23394,9 +23396,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.c_password]]), _hoisted_17], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.c_password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[4] || (_cache[4] = function () {
+      return $options.register && $options.register.apply($options, arguments);
+    }),
+    type: "button",
+    "class": "btn btn-primary my-3"
+  }, "Register")], 32
   /* HYDRATE_EVENTS */
-  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" {{username}} "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[6] || (_cache[6] = function () {
+      return $options.register && $options.register.apply($options, arguments);
+    })
+  }, "try")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }

@@ -18,7 +18,7 @@
     <div class="container my-5">
         <div class="row justify-content-center align-items-center" >
            <div class="col-md-5 shadow p-3 rounded">
-               <form class="form-group" @submit.prevent="register()" action="" method="post">
+               <form class="form-group" @submit.prevent="register"  action="" method="post">
                    <label for="">Username</label>
                    <input type="text" class="form-control" v-model="username" > 
                     <label for="">Email</label>
@@ -27,8 +27,10 @@
                    <input type="password" class="form-control" v-model="password" >
                    <label for="">Confirm Password</label>
                    <input type="password" class="form-control" v-model="c_password" >
-                   <button type="submit" class="btn btn-primary my-3">Register</button>
+                   <button  @click="register" type="button" class="btn btn-primary my-3">Register</button>
                </form>
+               <!-- {{username}} -->
+               <button @click="register">try</button>
            </div>
         </div>
     </div>
@@ -45,6 +47,17 @@ export default {
         Footer,
         Header
     },
+    data(){
+        // let username = username.value
+        return{
+
+        }
+    },
+    methods : {
+        register(){
+            console.log('ss')
+        }
+    }
 }
 </script>
 
