@@ -15,18 +15,18 @@
   </div> <!-- .page-banner -->
 
     <!-- registration form -->
-    <div class="container">
+    <div class="container my-5">
         <div class="row justify-content-center align-items-center">
-           <div class="col-md-5">
+           <div class="col-md-5 shadow p-3 rounded">
                <form class="form-group" @submit.prevent="register()" action="" method="post">
                    <label for="">Username</label>
-                   <input type="text" class="form-control" v-model="username" > <br>
+                   <input type="text" class="form-control" v-model="username" > 
                     <label for="">Email</label>
-                   <input type="email" class="form-control" v-model="email" ><br>
+                   <input type="email" class="form-control" v-model="email" >
                    <label for="">Password</label>
-                   <input type="password" class="form-control" v-model="password" ><br>
+                   <input type="password" class="form-control" v-model="password" >
                    <label for="">Confirm Password</label>
-                   <input type="password" class="form-control" v-model="c_password" ><br>
+                   <input type="password" class="form-control" v-model="c_password" >
                </form>
            </div>
         </div>
