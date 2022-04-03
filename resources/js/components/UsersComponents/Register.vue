@@ -17,14 +17,14 @@
     <!-- registration form -->
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            
+            hello
         </div>
     </div>
     <Footer />
 </template>
 
 <script>
-
+import axios from 'axios'
 import Footer from './layouts/Footer.vue'
 import Header from './layouts/Header.vue'
 export default {
