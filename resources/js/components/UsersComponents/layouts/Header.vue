@@ -55,18 +55,18 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/doctors" class="nav-link">
-                <a class="nav-link" href="#">Doctors</a>
+              <router-link to="/doctors" class="nav-link" :class="routers == 'doctors' ? 'active-style' : '' ">
+                  Doctors
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/blog" class="nav-link">
-                <a class="nav-link" href="#">News</a>
+              <router-link to="/blog" class="nav-link" :class="routers == 'news' ? 'active-style' : '' ">
+                  News
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/contact" class="nav-link">
-                <a class="nav-link" href="#">Contact</a>
+              <router-link to="/contact" class="nav-link" :class="routers == 'contact' ? 'active-style' : '' ">
+               Contact
               </router-link>
             </li>
             <li class="nav-item">
