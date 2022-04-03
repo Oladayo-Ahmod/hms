@@ -49,7 +49,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/about" class="nav-link" :class="1==1">
+              <router-link to="/about" class="nav-link" :class="routers == 'about' ? 'active-style' : '' ">
                 <!-- <a class="nav-link" href="#">About Us</a> -->
                 About Us
               </router-link>
@@ -105,6 +105,6 @@ mounted(){
 
 <style scoped>
 .active-style{
-  color : #00D9A5;
+  color : #00D9A5 !important;
 }
 </style>>
