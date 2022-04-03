@@ -22912,9 +22912,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Header",
+  data: function data() {
+    var routers = '';
+    return {
+      routers: routers
+    };
+  },
   methods: {
     currentRoute: function currentRoute() {
       var route = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.useRoute)().name;
+      this.routers = route;
+      console.log(this.routers);
     }
   },
   mounted: function mounted() {

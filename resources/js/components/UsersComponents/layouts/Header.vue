@@ -83,10 +83,17 @@
 import {useRoute} from 'vue-router'
 export default {
 name : "Header",
+data(){
+  let routers = '';
+  return{
+    routers
+  }
+},
 methods : {
   currentRoute(){
     let route = useRoute().name;
-    
+    this.routers = route
+    console.log(this.routers)
   }
 },
 mounted(){
