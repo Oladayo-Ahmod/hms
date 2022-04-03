@@ -17,7 +17,18 @@
     <!-- registration form -->
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            hello
+           <div class="col-md-5">
+               <form class="form-group" @submit.prevent="register()" action="" method="post">
+                   <label for="">Username</label>
+                   <input type="text" class="form-control" v-model="username" > <br>
+                    <label for="">Email</label>
+                   <input type="email" class="form-control" v-model="email" ><br>
+                   <label for="">Password</label>
+                   <input type="password" class="form-control" v-model="password" ><br>
+                   <label for="">Confirm Password</label>
+                   <input type="password" class="form-control" v-model="c_password" ><br>
+               </form>
+           </div>
         </div>
     </div>
     <Footer />
