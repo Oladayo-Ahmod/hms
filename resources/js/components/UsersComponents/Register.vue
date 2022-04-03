@@ -48,9 +48,11 @@ export default {
         Header
     },
     data(){
-        // let username = username.value
         return{
-
+            username : '',
+            email : '',
+            password : '',
+            c_password : ''
         }
     },
     methods : {
