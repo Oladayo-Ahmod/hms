@@ -3,6 +3,9 @@ import Home from '../components/UsersComponents/Home'
 import About from '../components/UsersComponents/About'
 import Doctors from '../components/UsersComponents/Doctors'
 import Contact from '../components/UsersComponents/Contact'
+import Register from '../components/UsersComponents/Register'
+
+// admin components
 import Dashboard from '../components/AdminComponents/Dashboard'
 // import routes from '../routes'
 const router = createRouter({
@@ -29,6 +32,12 @@ const router = createRouter({
       path: "/contact",
       name: "contact",
       component: Contact,
+    },
+    {
+
+    path: "/register",
+    name: "register",
+    component: Register,
     },
     // admin routes
     {

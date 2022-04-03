@@ -9,7 +9,7 @@
             <li class="breadcrumb-item active" aria-current="page">Registration Form</li>
           </ol>
         </nav>
-        <h1 class="font-weight-normal">Contact</h1>
+        <h1 class="font-weight-normal">Register</h1>
       </div> <!-- .container -->
     </div> <!-- .banner-section -->
   </div> <!-- .page-banner -->
