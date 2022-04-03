@@ -85,6 +85,7 @@ export default {
 name : "Header",
 data(){
   let routers = '';
+
   return{
     routers
   }
@@ -102,6 +103,8 @@ mounted(){
 }
 </script>
 
-<style>
-
-</style>
+<style scoped>
+.active-style{
+  color : #00D9A5;
+}
+</style>>
