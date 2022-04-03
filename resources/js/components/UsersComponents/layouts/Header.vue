@@ -42,10 +42,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               
-              <router-link to="/home" class="nav-link">
-                <a class="nav-link" href="#">Home</a>
+              <router-link to="/home" class="nav-link" :class="routers == 'home' ? 'active-style' : '' ">
+               Home
               </router-link>
             </li>
             <li class="nav-item">
