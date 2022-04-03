@@ -14,6 +14,12 @@
     </div> <!-- .banner-section -->
   </div> <!-- .page-banner -->
 
+    <!-- registration form -->
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            
+        </div>
+    </div>
     <Footer />
 </template>
 
