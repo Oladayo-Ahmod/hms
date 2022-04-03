@@ -49,8 +49,9 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/about" class="nav-link">
-                <a class="nav-link" href="#">About Us</a>
+              <router-link to="/about" class="nav-link" :class="1==1">
+                <!-- <a class="nav-link" href="#">About Us</a> -->
+                About Us
               </router-link>
             </li>
             <li class="nav-item">
@@ -79,8 +80,18 @@
 </template>
 
 <script>
+import {useRoute} from 'vue-router'
 export default {
-name : "Header"
+name : "Header",
+methods : {
+  currentRoute(){
+    let route = useRoute().name;
+    
+  }
+},
+mounted(){
+  this.currentRoute()
+}
 }
 </script>
 
