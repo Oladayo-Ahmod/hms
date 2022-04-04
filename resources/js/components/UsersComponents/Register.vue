@@ -19,10 +19,8 @@
         <div class="row justify-content-center align-items-center" >
            <div class="col-md-5 shadow p-3 rounded">
              <div class="container" v-if="message !== ''">
-               <div class="alert alert-danger" role="alert" v-if="message.error !== '' ">
-                 <ul v-for="msg in message" :key="msg.error">
-                   <li>{{msg.error}}!</li>
-                 </ul>
+               <div v-if="message.error !== '' ">
+                 <p class="alert alert-danger">{{message.error}}</p>
                </div>
                
              </div>
@@ -79,9 +77,10 @@ export default {
                 console.log(this.message.error)
               }
             }
-
-
         }
+    },
+    computed(){
+      
     }
 }
 </script>
