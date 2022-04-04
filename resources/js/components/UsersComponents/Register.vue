@@ -22,6 +22,9 @@
                <div v-if="message.error !== '' ">
                  <p class="alert alert-danger">{{message.error}}</p>
                </div>
+               <div v-else-if="message.success !== '' ">
+                 <p class="alert alert-danger">{{message.success}}</p>
+               </div>
                
              </div>
                <form class="form-group" @submit.prevent="register"  action="" method="post">
@@ -70,18 +73,24 @@ export default {
     },
     methods : {
         register(){
+          
             for(let check in this.form){
-              if (this.form[check] == '' || this.form[check] == null) {
+              if (this.form[check] == '') { 
                 // console.log(check)
                 this.message.error = `${check} field is required `
-                console.log(this.message.error)
+              }
+              else if (this.form.password !== this.form.confirm_password) {
+                this.message.error = `passwords do not match `
+              }
+              if(this.form[check] !== '' && this.form[check] !== null && this.form.password == this.form.confirm_password){
+                // this.message.success = 'success'
+                // this.message.error = ''
               }
             }
+
         }
-    },
-    computed(){
-      
     }
+
 }
 </script>
 
