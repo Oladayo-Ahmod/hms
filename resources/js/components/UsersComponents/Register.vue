@@ -19,8 +19,10 @@
         <div class="row justify-content-center align-items-center" >
            <div class="col-md-5 shadow p-3 rounded">
              <div class="container" v-if="message !== ''">
-               <div class="alert alert-danger" role="alert" v-if="message.error !== ''">
-                 <strong>{{message.error}}!</strong>
+               <div class="alert alert-danger" role="alert" v-if="message.error !== '' ">
+                 <ul v-for="msg in message" :key="msg.error">
+                   <li>{{msg.error}}!</li>
+                 </ul>
                </div>
                
              </div>
@@ -32,7 +34,7 @@
                    <label for="">Password</label>
                    <input type="password" class="form-control" v-model="form.password" >
                    <label for="">Confirm Password</label>
-                   <input type="password" class="form-control" v-model="form.c_password" >
+                   <input type="password" class="form-control" v-model="form.confirm_password" >
                    <button  @click="register" type="button" class="btn btn-primary my-3">Register</button>
                </form>
                <!-- {{username}} -->
@@ -64,7 +66,7 @@ export default {
               username : '',
               email : '',
               password : '',
-              c_password : ''
+              confirm_password : ''
             }
         }
     },
