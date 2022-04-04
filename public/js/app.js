@@ -22921,8 +22921,10 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     register: function register() {
       for (var check in this.form) {
-        if (check == '' || check == null) {
+        if (this.form[check] == '' || this.form[check] == null) {
+          // console.log(check)
           this.message.error = "".concat(check, " field is required ");
+          console.log(this.message.error);
         }
       }
     }

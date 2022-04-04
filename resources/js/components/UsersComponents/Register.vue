@@ -71,8 +71,10 @@ export default {
     methods : {
         register(){
             for(let check in this.form){
-              if (check == '' || check == null) {
+              if (this.form[check] == '' || this.form[check] == null) {
+                // console.log(check)
                 this.message.error = `${check} field is required `
+                console.log(this.message.error)
               }
             }
 
