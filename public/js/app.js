@@ -23402,7 +23402,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.c_password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[4] || (_cache[4] = function () {
-      return $options.register && $options.register.apply($options, arguments);
+      return _ctx.registers && _ctx.registers.apply(_ctx, arguments);
     }),
     type: "button",
     "class": "btn btn-primary my-3"
