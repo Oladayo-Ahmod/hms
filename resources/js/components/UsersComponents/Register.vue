@@ -27,7 +27,7 @@
                    <input type="password" class="form-control" v-model="password" >
                    <label for="">Confirm Password</label>
                    <input type="password" class="form-control" v-model="c_password" >
-                   <button  @click="register" type="button" class="btn btn-primary my-3">Register</button>
+                   <button  @click="registers" type="button" class="btn btn-primary my-3">Register</button>
                </form>
                <!-- {{username}} -->
                <button @click="register">try</button>
