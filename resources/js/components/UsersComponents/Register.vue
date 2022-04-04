@@ -77,21 +77,25 @@ export default {
     },
     computed : {
         register(){
-          if (this.form.password !== this.form.confirm_password) {
+          if (this.form.password !== this.form.confirm_password) { // check password combination
             this.message.error = `passwords do not match`
           }
-          else if(this.username == ''){
-            this.message.error = 'username is missing'
+          else if(this.form.username == ''){
+            this.message.error = 'username is missing' // check username
           }
-          else if(this.password == ''){
-            this.message.error = 'password is missing'
-          }
-          else if(this.username == ''){
-            this.message.error = 'confirm password is missing'
+          else if(this.form.password == ''){
+            this.message.error = 'password is missing' // check password
           }
           else{
-            this.message = ''
+            axios.get('http://localhost/api/test').then(
+              response =>{
+                console.log(response)
+              }
+            ).catch(error =>{
+              console.log(error)
+            })
           }
+        }
         
     }
 
