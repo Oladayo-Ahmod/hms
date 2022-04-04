@@ -41,6 +41,8 @@
                <!-- {{username}} -->
            </div>
         </div>
+
+        <button @click="final">fina</button>
     </div>
     <Footer />
 </template>
@@ -63,32 +65,34 @@ export default {
               success : ''
             },
 
-            form : {
+            form : 
+              {
               username : '',
               email : '',
               password : '',
               confirm_password : ''
             }
+            
         }
     },
-    methods : {
+    computed : {
         register(){
-          
-            for(let check in this.form){
-              if (this.form[check] == '') { 
-                // console.log(check)
-                this.message.error = `${check} field is required `
-              }
-              else if (this.form.password !== this.form.confirm_password) {
-                this.message.error = `passwords do not match `
-              }
-              if(this.form[check] !== '' && this.form[check] !== null && this.form.password == this.form.confirm_password){
-                // this.message.success = 'success'
-                // this.message.error = ''
-              }
-            }
-
-        }
+          if (this.form.password !== this.form.confirm_password) {
+            this.message.error = `passwords do not match`
+          }
+          else if(this.username == ''){
+            this.message.error = 'username is missing'
+          }
+          else if(this.password == ''){
+            this.message.error = 'password is missing'
+          }
+          else if(this.username == ''){
+            this.message.error = 'confirm password is missing'
+          }
+          else{
+            this.message = ''
+          }
+        
     }
 
 }
