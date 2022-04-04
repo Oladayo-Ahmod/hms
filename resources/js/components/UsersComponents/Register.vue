@@ -18,19 +18,24 @@
     <div class="container my-5">
         <div class="row justify-content-center align-items-center" >
            <div class="col-md-5 shadow p-3 rounded">
+             <div class="container" v-if="message !== ''">
+               <div class="alert alert-danger" role="alert" v-if="message.error !== ''">
+                 <strong>{{message.error}}!</strong>
+               </div>
+               
+             </div>
                <form class="form-group" @submit.prevent="register"  action="" method="post">
                    <label for="">Username</label>
-                   <input type="text" class="form-control" v-model="username" > 
+                   <input type="text" class="form-control" v-model="form.username" > 
                     <label for="">Email</label>
-                   <input type="email" class="form-control" v-model="email" >
+                   <input type="email" class="form-control" v-model="form.email" >
                    <label for="">Password</label>
-                   <input type="password" class="form-control" v-model="password" >
+                   <input type="password" class="form-control" v-model="form.password" >
                    <label for="">Confirm Password</label>
-                   <input type="password" class="form-control" v-model="c_password" >
-                   <button  @click="registers" type="button" class="btn btn-primary my-3">Register</button>
+                   <input type="password" class="form-control" v-model="form.c_password" >
+                   <button  @click="register" type="button" class="btn btn-primary my-3">Register</button>
                </form>
                <!-- {{username}} -->
-               <button @click="register">try</button>
            </div>
         </div>
     </div>
@@ -49,15 +54,29 @@ export default {
     },
     data(){
         return{
-            username : '',
-            email : '',
-            password : '',
-            c_password : ''
+
+            message : {
+              error : '',
+              success : ''
+            },
+
+            form : {
+              username : '',
+              email : '',
+              password : '',
+              c_password : ''
+            }
         }
     },
     methods : {
         register(){
-            console.log('ss')
+            for(let check in this.form){
+              if (check == '' || check == null) {
+                this.message.error = `${check} field is required `
+              }
+            }
+
+
         }
     }
 }
