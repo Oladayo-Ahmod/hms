@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -25,7 +25,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the request
+        // $request->validate([
+        //     'first_name'=> 'required|string',
+        //     'last_name'=> 'required|string',
+        //     'email'=> 'email|required|unique:users',
+        //     'password'=> 'required|min:6'
+        // ]);
+        // store the user
+        // $user = new  User;
+        // $user
+        return response()->json($request);
+
     }
 
     /**

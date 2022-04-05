@@ -91,10 +91,11 @@ export default {
             this.message.error = 'password is missing' // check password
           }
           else{
-            axios.get('http://localhost:8000/api/register').then(
+            axios.post('http://localhost:8000/api/register',this.form).then(
               response =>{
                this.message.error = ''
                this.message.success = 'Success'
+               console.log(response.data)
               }
             ).catch(error =>{
               console.log(error)

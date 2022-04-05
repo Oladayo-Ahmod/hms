@@ -22933,9 +22933,10 @@ __webpack_require__.r(__webpack_exports__);
       } else if (this.form.password == '') {
         this.message.error = 'password is missing'; // check password
       } else {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:8000/api/register').then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/register', this.form).then(function (response) {
           _this.message.error = '';
           _this.message.success = 'Success';
+          console.log(response.data);
         })["catch"](function (error) {
           console.log(error);
         });
