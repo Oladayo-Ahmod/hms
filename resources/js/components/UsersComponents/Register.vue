@@ -28,8 +28,10 @@
                
              </div>
                <form class="form-group" @submit.prevent="register"  action="" method="post">
-                   <label for="">Username</label>
-                   <input type="text" class="form-control" v-model="form.username" > 
+                   <label for="">First Name</label>
+                   <input type="text" class="form-control" v-model="form.first_name" > 
+                   <label for="">Last Name</label>
+                   <input type="text" class="form-control" v-model="form.last_name" > 
                     <label for="">Email</label>
                    <input type="email" class="form-control" v-model="form.email" >
                    <label for="">Password</label>
@@ -67,7 +69,8 @@ export default {
 
             form : 
               {
-              username : '',
+              first_name : '',
+              last_name : '',
               email : '',
               password : '',
               confirm_password : ''
@@ -80,8 +83,11 @@ export default {
           if (this.form.password !== this.form.confirm_password) { // check password combination
             this.message.error = `passwords do not match`
           }
-          else if(this.form.username == ''){
-            this.message.error = 'username is missing' // check username
+          else if(this.form.first_name == ''){
+            this.message.error = 'first name is missing' // check username
+          }
+          else if(this.form.last_name == ''){
+            this.message.error = 'last name is missing' // check username
           }
           else if(this.form.password == ''){
             this.message.error = 'password is missing' // check password
