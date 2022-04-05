@@ -22926,27 +22926,31 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.form.password !== this.form.confirm_password) {
         // check password combination
-        this.message.error = "passwords do not match";
+        this.message.error[0] = "passwords do not match";
       } else if (this.form.first_name == '') {
-        this.message.error = 'first name is missing'; // check username
+        this.message.error[0] = 'first name is missing'; // check username
       } else if (this.form.last_name == '') {
-        this.message.error = 'last name is missing'; // check username
+        this.message.error[0] = 'last name is missing'; // check username
       } else if (this.form.password == '') {
-        this.message.error = 'password is missing'; // check password
+        this.message.error[0] = 'password is missing'; // check password
       } else {
         axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/register', this.form).then(function (response) {
-          var checks = [];
-          _this.message.error = '';
-          _this.message.success = 'Success'; //  console.log(this.test)
+          if (response.data.error) {
+            _this.message.success = ''; //set success message to empty
 
-          Object.keys(response.data.error).forEach(function (key) {
-            _this.message.error = response.data.error[key]; // state.messages = messages;
+            Object.keys(response.data.error).forEach(function (e) {
+              _this.message.error = response.data.error[e];
+            });
+          } else if (response.data.success) {
+            _this.message.error = ''; // set error message to empty
 
-            console.log(_this.message.error);
-          });
+            console.log(response.data.success);
+            _this.message.success = response.data.success;
+            console.log(response.data.success);
+          }
         })["catch"](function (errors) {
           // this.message.error = errors.error.email
-          console.log(errors.error);
+          console.log(errors);
         });
       }
     }
@@ -23425,7 +23429,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     )]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : $data.message.success !== '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.message.success), 1
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.message.success !== '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.message.success), 1
   /* TEXT */
   )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "form-group",

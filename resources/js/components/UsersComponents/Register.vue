@@ -24,7 +24,7 @@
                     <p class="alert alert-danger">{{msg}}</p>
                  </div>
                </div>
-               <div v-else-if="message.success !== '' ">
+               <div v-if="message.success !== '' ">
                  <p class="alert alert-success">{{message.success}}</p>
                </div>
                
@@ -81,34 +81,38 @@ export default {
     computed : {
         register(){
           if (this.form.password !== this.form.confirm_password) { // check password combination
-            this.message.error = `passwords do not match`
+            this.message.error[0] = `passwords do not match`
           }
           else if(this.form.first_name == ''){
-            this.message.error = 'first name is missing' // check username
+            this.message.error[0] = 'first name is missing' // check username
           }
           else if(this.form.last_name == ''){
-            this.message.error = 'last name is missing' // check username
+            this.message.error[0] = 'last name is missing' // check username
           }
           else if(this.form.password == ''){
-            this.message.error = 'password is missing' // check password
+            this.message.error[0] = 'password is missing' // check password
           }
           else{
             axios.post('http://localhost:8000/api/register',this.form).then(
               response =>{
-                let checks = []
-               this.message.error = ''
-               this.message.success = 'Success'
-              //  console.log(this.test)
-                Object.keys(response.data.error).forEach(key =>{
-                  this.message.error = response.data.error[key]
-                  // state.messages = messages;
-                  console.log(this.message.error)
-                })
+               if (response.data.error) {
+                 this.message.success = '' //set success message to empty
+                 Object.keys(response.data.error).forEach(e =>{
+                   this.message.error = response.data.error[e]
+                 })
+               }
+               else if(response.data.success){
+                 this.message.error = '' // set error message to empty
+                 console.log(response.data.success)
+                  this.message.success = response.data.success
+                 console.log(response.data.success)
+
+               }
 
               }
             ).catch(errors =>{
               // this.message.error = errors.error.email
-              console.log(errors.error)
+              console.log(errors)
             })
           }
         }

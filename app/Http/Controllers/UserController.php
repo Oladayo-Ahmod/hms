@@ -48,7 +48,7 @@ class UserController extends Controller
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->save();
-            return response()->json(['msg'=>'success']);
+            return response()->json(['success'=>'Signed up successfully']);
         }
         
      
