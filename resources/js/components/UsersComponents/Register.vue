@@ -43,8 +43,6 @@
                <!-- {{username}} -->
            </div>
         </div>
-
-        <button @click="final">fina</button>
     </div>
     <Footer />
 </template>
