@@ -38,7 +38,7 @@ class UserController extends Controller
         // check for error message
         if ($validator->fails()) {
             # code...
-            return response()->json($validator->errors(),404);
+            return response()->json($validator->errors());
         }
         else{
             // store the user
