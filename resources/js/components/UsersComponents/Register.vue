@@ -23,7 +23,7 @@
                  <p class="alert alert-danger">{{message.error}}</p>
                </div>
                <div v-else-if="message.success !== '' ">
-                 <p class="alert alert-danger">{{message.success}}</p>
+                 <p class="alert alert-success">{{message.success}}</p>
                </div>
                
              </div>
@@ -87,9 +87,10 @@ export default {
             this.message.error = 'password is missing' // check password
           }
           else{
-            axios.get('http://localhost/api/test').then(
+            axios.get('http://localhost:8000/api/register').then(
               response =>{
-                console.log(response)
+               this.message.error = ''
+               this.message.success = 'Success'
               }
             ).catch(error =>{
               console.log(error)
