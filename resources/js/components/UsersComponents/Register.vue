@@ -20,7 +20,9 @@
            <div class="col-md-5 shadow p-3 rounded">
              <div class="container" v-if="message !== ''">
                <div v-if="message.error !== '' ">
-                 <p class="alert alert-danger">{{message.error}}</p>
+                 <div v-for="msg in message.error" :key="msg">
+                    <p class="alert alert-danger">{{msg}}</p>
+                 </div>
                </div>
                <div v-else-if="message.success !== '' ">
                  <p class="alert alert-success">{{message.success}}</p>
@@ -61,10 +63,10 @@ export default {
         return{
 
             message : {
-              error : '',
+              error : [],
               success : ''
             },
-
+              test : [],
             form : 
               {
               first_name : '',
@@ -93,12 +95,20 @@ export default {
           else{
             axios.post('http://localhost:8000/api/register',this.form).then(
               response =>{
+                let checks = []
                this.message.error = ''
                this.message.success = 'Success'
-               console.log(response.data)
+              //  console.log(this.test)
+                Object.keys(response.data.error).forEach(key =>{
+                  this.message.error = response.data.error[key]
+                  // state.messages = messages;
+                  console.log(this.message.error)
+                })
+
               }
-            ).catch(error =>{
-              console.log(error)
+            ).catch(errors =>{
+              // this.message.error = errors.error.email
+              console.log(errors.error)
             })
           }
         }
