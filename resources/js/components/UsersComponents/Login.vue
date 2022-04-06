@@ -82,6 +82,7 @@ export default {
           else{
             axios.post('http://localhost:8000/api/login',this.form).then(
               response =>{
+                  console.log(response)
                if (response.data.error) {
                  this.message.success = '' //set success message to empty
                  Object.keys(response.data.error).forEach(e =>{

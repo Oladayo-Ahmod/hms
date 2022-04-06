@@ -74,7 +74,7 @@ class UserController extends Controller
         }
         // check for the credentials
         else{
-            $user = User::where('email',$request->email);
+            $user = User::where('email',$request->email)->first();
             return response()->json($user);
         }
     }
