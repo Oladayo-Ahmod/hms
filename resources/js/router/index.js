@@ -4,6 +4,7 @@ import About from '../components/UsersComponents/About'
 import Doctors from '../components/UsersComponents/Doctors'
 import Contact from '../components/UsersComponents/Contact'
 import Register from '../components/UsersComponents/Register'
+import Login from '../components/UsersComponents/Login'
 
 // admin components
 import Dashboard from '../components/AdminComponents/Dashboard'
@@ -38,6 +39,12 @@ const router = createRouter({
     path: "/register",
     name: "register",
     component: Register,
+    },
+    {
+
+    path: "/login",
+    name: "login",
+    component: Login,
     },
     // admin routes
     {

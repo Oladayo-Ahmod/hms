@@ -36,7 +36,7 @@
                    <label for="">Password</label>
                    <input type="password" class="form-control" v-model="form.password" >
                    <div class="d-flex " style="justify-content:space-between">
-                      <button  @click="login" type="button" class="btn btn-primary my-3">Register</button>
+                      <button  @click="login" type="button" class="btn btn-primary my-3">Login</button>
                       <span class="my-4 text-sm">Not yet registered? <a href="/register">Register</a> </span>
                    </div>
                </form>
@@ -52,7 +52,7 @@ import axios from 'axios'
 import Footer from './layouts/Footer.vue'
 import Header from './layouts/Header.vue'
 export default {
-    name : "Register",
+    name : "Login",
     components : {
         Footer,
         Header

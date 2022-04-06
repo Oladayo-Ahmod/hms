@@ -7,6 +7,7 @@ import Home from './components/UsersComponents/Home.vue';
 import About from './components/UsersComponents/About.vue';
 import Doctors from './components/UsersComponents/Doctors.vue';
 import Register from './components/UsersComponents/Register.vue';
+import Login from './components/UsersComponents/Login.vue';
 
 // admin components
 import Dashboard from './components/AdminComponents/Dashboard.vue';
@@ -18,6 +19,7 @@ let app=createApp({
         About,
         Doctors,
         Register,
+        Login,
         Dashboard
     }
 })
