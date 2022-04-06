@@ -74,17 +74,11 @@ export default {
     },
     computed : {
         register(){ // user registration
-          if (this.form.password !== this.form.confirm_password) { // check password combination
-            this.message.error[0] = `passwords do not match`
-          }
-          else if(this.form.first_name == ''){
-            this.message.error[0] = 'first name is missing' // check username
-          }
-          else if(this.form.last_name == ''){
-            this.message.error[0] = 'last name is missing' // check username
-          }
-          else if(this.form.password == ''){
+           if(this.form.password == ''){
             this.message.error[0] = 'password is missing' // check password
+          }
+          else if(this.form.email == ''){
+            this.message.error[0] = 'email is missing' // check password
           }
           else{
             axios.post('http://localhost:8000/api/register',this.form).then(
