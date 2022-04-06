@@ -74,8 +74,15 @@ class UserController extends Controller
         }
         // check for the credentials
         else{
-            $user = User::where('email',$request->email)->first();
-            return response()->json($user);
+            $user = User::where('email', '=', $request->email)->first();
+            if (Hash::check($request->password, $user['password'])) {
+                
+                return response()->json(['success'=>'loggedin']);
+            }
+            else{
+                return response()->json(['error'=>'incorrect email or password']);
+
+            }
         }
     }
 

@@ -22937,8 +22937,8 @@ __webpack_require__.r(__webpack_exports__);
             });
           } else if (response.data.success) {
             _this.message.error = ''; // set error message to empty
+            //  console.log(response.data.success)
 
-            console.log(response.data.success);
             _this.message.success = response.data.success;
             console.log(response.data.success);
           }

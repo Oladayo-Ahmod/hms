@@ -87,11 +87,12 @@ export default {
                  this.message.success = '' //set success message to empty
                  Object.keys(response.data.error).forEach(e =>{
                    this.message.error = response.data.error[e]
+                   
                  })
                }
                else if(response.data.success){
                  this.message.error = '' // set error message to empty
-                 console.log(response.data.success)
+                //  console.log(response.data.success)
                   this.message.success = response.data.success
                  console.log(response.data.success)
 
