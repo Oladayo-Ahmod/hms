@@ -95,6 +95,9 @@ export default {
           else if(this.form.password == ''){
             this.message.error[0] = 'password is missing' // check password
           }
+          else if(this.form.email == ''){
+            this.message.error[0] = 'email is missing' // check password
+          }
           else{
             axios.post('http://localhost:8000/api/register',this.form).then(
               response =>{
