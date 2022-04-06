@@ -40,7 +40,10 @@
                    <input type="password" class="form-control" v-model="form.password" >
                    <label for="">Confirm Password</label>
                    <input type="password" class="form-control" v-model="form.confirm_password" >
-                   <button  @click="register" type="button" class="btn btn-primary my-3">Register</button>
+                   <div class="d-flex " style="justify-content:space-between">
+                      <button  @click="register" type="button" class="btn btn-primary my-3">Register</button>
+                      <span class="my-4 text-sm">Already signed up? <a href="/login">Login</a> </span>
+                   </div>
                </form>
                <!-- {{username}} -->
            </div>
@@ -79,7 +82,7 @@ export default {
         }
     },
     computed : {
-        register(){
+        register(){ // user registration
           if (this.form.password !== this.form.confirm_password) { // check password combination
             this.message.error[0] = `passwords do not match`
           }

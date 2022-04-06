@@ -70,7 +70,9 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="#">Login / Register</a>
+              <router-link to="/register" class="btn btn-primary ml-lg-3" > 
+                Login / Register
+              </router-link>
             </li>
           </ul>
         </div> <!-- .navbar-collapse -->
