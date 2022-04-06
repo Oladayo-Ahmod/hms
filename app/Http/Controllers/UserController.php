@@ -27,6 +27,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        // registation functionality
+
         // validate the request
         $validator = Validator::make($request->all(),[
             'first_name'=> 'required|string',
@@ -55,15 +57,38 @@ class UserController extends Controller
 
     }
 
+     /**
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function login(Request $request){
+        $validator = Validator::make($request->all(),[
+            'email' => 'required|email',
+            'password'=> 'required|min:6'
+        ]);
+
+        // check if validator fails
+        if ($validator->fails()) {
+            # code...
+            return response()->json(['error'=>$validator->errors()]);
+        }
+        // check for the credentials
+        else{
+            $user = User::where('email',$request->email);
+            return response()->json($user);
+        }
+    }
+
     /**
      * Display the specified resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, Request $request)
     {
         //
+
     }
 
     /**

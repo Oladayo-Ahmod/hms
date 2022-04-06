@@ -22917,7 +22917,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
-    register: function register() {
+    login: function login() {
       var _this = this;
 
       // user registration
@@ -22926,7 +22926,7 @@ __webpack_require__.r(__webpack_exports__);
       } else if (this.form.email == '') {
         this.message.error[0] = 'email is missing'; // check password
       } else {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/register', this.form).then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/login', this.form).then(function (response) {
           if (response.data.error) {
             _this.message.success = ''; //set success message to empty
 
@@ -23005,6 +23005,8 @@ __webpack_require__.r(__webpack_exports__);
         this.message.error[0] = 'last name is missing'; // check username
       } else if (this.form.password == '') {
         this.message.error[0] = 'password is missing'; // check password
+      } else if (this.form.email == '') {
+        this.message.error[0] = 'email is missing'; // check password
       } else {
         axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/register', this.form).then(function (response) {
           if (response.data.error) {
@@ -23447,28 +23449,26 @@ var _hoisted_17 = {
   "class": "alert alert-success"
 };
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" @csrf ");
-
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": ""
 }, "Email", -1
 /* HOISTED */
 );
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": ""
 }, "Password", -1
 /* HOISTED */
 );
 
-var _hoisted_21 = {
+var _hoisted_20 = {
   "class": "d-flex",
   style: {
     "justify-content": "space-between"
   }
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "my-4 text-sm"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Not yet registered? "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "/register"
@@ -23505,11 +23505,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "form-group",
     onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
-      return _ctx.login && _ctx.login.apply(_ctx, arguments);
+      return $options.login && $options.login.apply($options, arguments);
     }, ["prevent"])),
     action: "",
     method: "post"
-  }, [_hoisted_18, _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "email",
     "class": "form-control",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
@@ -23517,7 +23517,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]]), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]]), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     "class": "form-control",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
@@ -23525,13 +23525,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[2] || (_cache[2] = function () {
-      return _ctx.login && _ctx.login.apply(_ctx, arguments);
+      return $options.login && $options.login.apply($options, arguments);
     }),
     type: "button",
     "class": "btn btn-primary my-3"
-  }, "Login"), _hoisted_22])], 32
+  }, "Login"), _hoisted_21])], 32
   /* HYDRATE_EVENTS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" {{username}} ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */

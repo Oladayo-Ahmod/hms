@@ -30,7 +30,6 @@
                
              </div>
                <form class="form-group" @submit.prevent="login"  action="" method="post">
-                   @csrf
                     <label for="">Email</label>
                    <input type="email" class="form-control" v-model="form.email" >
                    <label for="">Password</label>
@@ -73,7 +72,7 @@ export default {
         }
     },
     computed : {
-        register(){ // user registration
+        login(){ // user registration
            if(this.form.password == ''){
             this.message.error[0] = 'password is missing' // check password
           }
@@ -81,7 +80,7 @@ export default {
             this.message.error[0] = 'email is missing' // check password
           }
           else{
-            axios.post('http://localhost:8000/api/register',this.form).then(
+            axios.post('http://localhost:8000/api/login',this.form).then(
               response =>{
                if (response.data.error) {
                  this.message.success = '' //set success message to empty
