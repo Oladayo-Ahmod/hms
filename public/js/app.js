@@ -22906,6 +22906,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      loginState: {
+        firstName: '',
+        login: ''
+      },
       message: {
         error: [],
         success: ''
@@ -22948,6 +22952,8 @@ __webpack_require__.r(__webpack_exports__);
         });
       }
     }
+  },
+  mounted: function mounted() {// this.currentRoute();
   }
 });
 
@@ -23068,9 +23074,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Header",
   data: function data() {
-    var routers = '';
     return {
-      routers: routers
+      routers: ''
     };
   },
   methods: {
@@ -23846,9 +23851,6 @@ var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 var _hoisted_19 = {
   "class": "nav-item"
 };
-
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Login / Register ");
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -23917,7 +23919,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "btn btn-primary ml-lg-3"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_20];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.title), 1
+      /* TEXT */
+      )];
     }),
     _: 1
     /* STABLE */

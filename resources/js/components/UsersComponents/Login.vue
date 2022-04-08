@@ -1,5 +1,5 @@
 <template>
-    <Header />
+    <Header  />
           <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="banner-section">
       <div class="container text-center wow fadeInUp">
@@ -58,7 +58,10 @@ export default {
     },
     data(){
         return{
-
+            loginState : {
+              firstName : '',
+              login : ''
+            },
             message : {
               error : [],
               success : ''
@@ -95,7 +98,6 @@ export default {
                 //  console.log(response.data.success)
                   this.message.success = response.data.success
                  console.log(response.data.success)
-
                }
 
               }
@@ -106,8 +108,10 @@ export default {
           }
         }
         
-    }
-
+    },
+  mounted(){
+    // this.currentRoute();
+  }
 }
 </script>
 

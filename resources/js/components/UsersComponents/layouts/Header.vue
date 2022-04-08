@@ -71,7 +71,7 @@
             </li>
             <li class="nav-item">
               <router-link to="/register" class="btn btn-primary ml-lg-3" > 
-                Login / Register
+               {{title}}
               </router-link>
             </li>
           </ul>
@@ -86,10 +86,8 @@ import {useRoute} from 'vue-router'
 export default {
 name : "Header",
 data(){
-  let routers = '';
-
   return{
-    routers
+    routers : '',
   }
 },
 methods : {
