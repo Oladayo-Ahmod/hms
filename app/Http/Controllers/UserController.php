@@ -5,9 +5,15 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
+    private UserRepository $userRepository;
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->repo = $userRepository;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +22,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        return response()->json('hello world');
+        $data = $this->getAllUsers();
+        return response()->json('$data');
     }
 
     /**
@@ -44,12 +51,7 @@ class UserController extends Controller
         }
         else{
             // store the user
-            $user = new User;
-            $user->first_name = $request->first_name;
-            $user->last_name = $request->last_name;
-            $user->email = $request->email;
-            $user->password = Hash::make($request->password);
-            $user->save();
+           $this->repo->CreateUser($request->all());
             return response()->json(['success'=>'Signed up successfully']);
         }
         

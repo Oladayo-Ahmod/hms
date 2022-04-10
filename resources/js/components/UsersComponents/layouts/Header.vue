@@ -116,7 +116,7 @@ methods : {
 },
 mounted(){
   this.currentRoute()
-}
+},
 }
 </script>
 
