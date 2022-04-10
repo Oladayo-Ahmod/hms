@@ -5,7 +5,7 @@ namespace App\Interfaces;
 interface UserInterface {
     function getAllUsers();
     function getUserById();
-    function createUser();
-    function updateUser($id, array $userDetails);
+    function createUser(array $userDetails);
+    function updateUser($id, array $newUserDetails);
     function deleteUser($id);
 }
