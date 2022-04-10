@@ -70,10 +70,26 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/register" class="btn btn-primary ml-lg-3" > 
+               <div class="dropdown" v-if="state !== null && state !== ''">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                              {{state}}
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="triggerId">
+                           <router-link to="/logout" class="dropdown-item"> 
+                              Logout
+                           </router-link>
+                           <router-link to="/profile" class="dropdown-item"> 
+                            Profile
+                           </router-link>
+                      </div>
+                  </div>
+              <router-link to="/register" class="btn btn-primary ml-lg-3" v-else> 
                {{state !== null ? state : 'Login/Register'}}
               </router-link>
+             
             </li>
+            
           </ul>
         </div> <!-- .navbar-collapse -->
       </div> <!-- .container -->
