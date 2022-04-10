@@ -71,7 +71,7 @@
             </li>
             <li class="nav-item">
               <router-link to="/register" class="btn btn-primary ml-lg-3" > 
-               {{state = 'null' ? 'Login/Register' : state}}
+               {{state !== null ? state : 'Login/Register'}}
               </router-link>
             </li>
           </ul>
