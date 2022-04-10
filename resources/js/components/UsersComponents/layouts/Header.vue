@@ -71,7 +71,7 @@
             </li>
             <li class="nav-item">
               <router-link to="/register" class="btn btn-primary ml-lg-3" > 
-               {{title}}
+               {{state = 'null' ? 'Login/Register' : state}}
               </router-link>
             </li>
           </ul>
@@ -84,6 +84,7 @@
 <script>
 import {useRoute} from 'vue-router'
 export default {
+props : ['state'],
 name : "Header",
 data(){
   return{

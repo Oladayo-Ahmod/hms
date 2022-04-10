@@ -77,7 +77,7 @@ class UserController extends Controller
             $user = User::where('email', '=', $request->email)->first();
             if (Hash::check($request->password, $user['password'])) {
                 
-                return response()->json(['success'=>'loggedin']);
+                return response()->json(['success'=>'loggedin','firstName'=>$user->first_name]);
             }
             else{
                 return response()->json(['error'=>'incorrect email or password']);

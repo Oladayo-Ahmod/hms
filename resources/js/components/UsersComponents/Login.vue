@@ -1,5 +1,5 @@
 <template>
-    <Header  />
+    <Header :state="loginState.firstName" />
           <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="banner-section">
       <div class="container text-center wow fadeInUp">
@@ -40,6 +40,7 @@
                    </div>
                </form>
                <!-- {{username}} -->
+               
            </div>
         </div>
     </div>
@@ -59,8 +60,8 @@ export default {
     data(){
         return{
             loginState : {
-              firstName : '',
-              login : ''
+              firstName : null,
+              login : false
             },
             message : {
               error : [],
@@ -97,7 +98,9 @@ export default {
                  this.message.error = '' // set error message to empty
                 //  console.log(response.data.success)
                   this.message.success = response.data.success
-                 console.log(response.data.success)
+                  this.loginState.login = true
+                  this.loginState.firstName = response.data.firstName
+                  console.log(this.loginState)
                }
 
               }
