@@ -84,8 +84,8 @@
                            </router-link>
                       </div>
                   </div>
-              <router-link to="/register" class="btn btn-primary ml-lg-3" v-else> 
-               {{state !== null ? state : 'Login/Register'}}
+              <router-link to="/login" class="btn btn-primary ml-lg-3" v-else> 
+               {{state !== null ? state : 'Login'}}
               </router-link>
              
             </li>

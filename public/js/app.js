@@ -23966,11 +23966,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
     key: 1,
-    to: "/register",
+    to: "/login",
     "class": "btn btn-primary ml-lg-3"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.state !== null ? $props.state : 'Login/Register'), 1
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.state !== null ? $props.state : 'Login'), 1
       /* TEXT */
       )];
     }),
