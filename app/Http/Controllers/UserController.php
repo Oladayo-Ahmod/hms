@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Repositories\UserRepository;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
     private UserRepository $userRepository;
     public function __construct(UserRepository $userRepository)
     {
-        $this->repo = $userRepository;
+        $this->userRepository = $userRepository;
     }
     /**
      * Display a listing of the resource.
@@ -22,10 +23,17 @@ class UserController extends Controller
     public function index()
     {
         //
-        $data = $this->getAllUsers();
-        return response()->json('$data');
+        if (Session::has('user')) {
+            return Session::get('user');
+            # code...
+        }
+        $data = $this->userRepository->getAllUsers();
+        return response()->json($data);
     }
 
+    public function session(){
+        return Session::get('user');
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -64,6 +72,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function login(Request $request){
+        
         $validator = Validator::make($request->all(),[
             'email' => 'required|email',
             'password'=> 'required|min:6'
@@ -78,7 +87,7 @@ class UserController extends Controller
         else{
             $user = User::where('email', '=', $request->email)->first();
             if (Hash::check($request->password, $user['password'])) {
-                
+                Session::put('user', $user);               
                 return response()->json(['success'=>'loggedin','firstName'=>$user->first_name]);
             }
             else{

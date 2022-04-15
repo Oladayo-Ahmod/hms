@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/check', function () {
+    return view('check');
 });
 Route::get('/{any}', function () {
     return view('welcome');
 })->where('any', '.*');
 // Route::view('URI', 'check');
-
+// Route::view('check', 'check');
 // fallback
 Route::fallback(function(){
     return 'requested page not found';

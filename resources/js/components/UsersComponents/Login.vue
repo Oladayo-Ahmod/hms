@@ -30,6 +30,7 @@
                
              </div>
                <form class="form-group" @submit.prevent="login"  action="" method="post">
+                 @csrf
                     <label for="">Email</label>
                    <input type="email" class="form-control" v-model="form.email" >
                    <label for="">Password</label>
@@ -40,7 +41,7 @@
                    </div>
                </form>
                <!-- {{username}} -->
-               
+               <button @click="getSession">session</button>
            </div>
         </div>
     </div>
@@ -84,7 +85,7 @@ export default {
             this.message.error[0] = 'email is missing' // check password
           }
           else{
-            axios.post('http://localhost:8000/api/login',this.form).then(
+            axios.post('http://localhost:8001/api/login',this.form).then(
               response =>{
                   console.log(response)
                if (response.data.error) {
@@ -109,6 +110,11 @@ export default {
               console.log(errors)
             })
           }
+        },
+        getSession(){
+          axios.get('http://localhost:8001/api/session').then(response =>{
+            console.log(response)
+          })
         }
         
     },

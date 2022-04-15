@@ -70,7 +70,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-               <div class="dropdown" v-if="state !== null && state !== ''">
+               <div class="dropdown" v-if="state">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
                               aria-expanded="false">
                               {{state}}
@@ -85,7 +85,7 @@
                       </div>
                   </div>
               <router-link to="/login" class="btn btn-primary ml-lg-3" v-else> 
-               {{state !== null ? state : 'Login'}}
+              Login
               </router-link>
              
             </li>
