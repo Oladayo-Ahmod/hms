@@ -101,7 +101,6 @@ export default {
           else{
             axios.post('http://localhost:8000/api/register',this.form).then(
               response =>{
-                console.log(response)
                if (response.data.error) {
                  this.message.success = '' //set success message to empty
                  Object.keys(response.data.error).forEach(e =>{
@@ -110,7 +109,6 @@ export default {
                }
                else if(response.data.success){
                  this.message.error = '' // set error message to empty
-                 console.log(response.data.success)
                   this.message.success = response.data.success
                  setTimeout(()=>{
                    this.$router.push('/login')

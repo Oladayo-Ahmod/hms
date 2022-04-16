@@ -23024,8 +23024,6 @@ __webpack_require__.r(__webpack_exports__);
         this.message.error[0] = 'email is missing'; // check password
       } else {
         axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/register', this.form).then(function (response) {
-          console.log(response);
-
           if (response.data.error) {
             _this.message.success = ''; //set success message to empty
 
@@ -23035,7 +23033,6 @@ __webpack_require__.r(__webpack_exports__);
           } else if (response.data.success) {
             _this.message.error = ''; // set error message to empty
 
-            console.log(response.data.success);
             _this.message.success = response.data.success;
             setTimeout(function () {
               _this.$router.push('/login');
