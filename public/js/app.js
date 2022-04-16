@@ -23037,7 +23037,9 @@ __webpack_require__.r(__webpack_exports__);
 
             console.log(response.data.success);
             _this.message.success = response.data.success;
-            console.log(response.data.success);
+            setTimeout(function () {
+              _this.$router.push('/login');
+            }, 2000);
           }
         })["catch"](function (errors) {
           // this.message.error = errors.error.email

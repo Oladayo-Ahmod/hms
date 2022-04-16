@@ -112,7 +112,9 @@ export default {
                  this.message.error = '' // set error message to empty
                  console.log(response.data.success)
                   this.message.success = response.data.success
-                 console.log(response.data.success)
+                 setTimeout(()=>{
+                   this.$router.push('/login')
+                 },2000);
 
                }
 

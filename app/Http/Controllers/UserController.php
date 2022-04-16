@@ -59,14 +59,10 @@ class UserController extends Controller
         }
         else{
             // store the user
-        //    $user = $this->repo->CreateUser($request->all());
-        $user = User::create($request->all());
-           if ($user) {
-
+           $user = $this->repo->CreateUser($request->all());
                # code...
-            return response()->json(['success'=>'Signed up successfully','token'=>$user->createToken('tokens')->plainTextToken]);
+            return response()->json(['success'=>'Signed up successfully']);
 
-           }
         }
         
      
@@ -94,7 +90,7 @@ class UserController extends Controller
             $user = User::where('email', '=', $request->email)->first();
             if (Hash::check($request->password, $user['password'])) {
                 Session::put('user', $user);               
-                return response()->json(['success'=>'loggedin','firstName'=>$user->first_name]);
+                return response()->json(['success'=>'loggedin','firstName'=>$user->first_name,'token'=>$user->createToken('tokens')->plainTextToken]);
             }
             else{
                 return response()->json(['error'=>'incorrect email or password']);
