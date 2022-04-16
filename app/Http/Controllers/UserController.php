@@ -59,8 +59,14 @@ class UserController extends Controller
         }
         else{
             // store the user
-           $this->repo->CreateUser($request->all());
-            return response()->json(['success'=>'Signed up successfully']);
+        //    $user = $this->repo->CreateUser($request->all());
+        $user = User::create($request->all());
+           if ($user) {
+
+               # code...
+            return response()->json(['success'=>'Signed up successfully','token'=>$user->createToken('tokens')->plainTextToken]);
+
+           }
         }
         
      
