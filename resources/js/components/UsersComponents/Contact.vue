@@ -30,11 +30,11 @@
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" class="form-control" placeholder="Enter subject..">
+            <input type="text" id="subject" v-model="contact.subject" class="form-control" placeholder="Enter subject..">
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="message">Message</label>
-            <textarea id="message" class="form-control" rows="8" placeholder="Enter Message.."></textarea>
+            <textarea id="message" class="form-control" v-model="contact.message" rows="8" placeholder="Enter Message.."></textarea>
           </div>
         </div>
         <button type="submit" class="btn btn-primary wow zoomIn">Send Message</button>
@@ -82,8 +82,8 @@ export default {
         userEmail : null,
         fullName : null,
         contact : {
-          message,
-          contact
+          message : null,
+          contact : null
         }
       }
     },

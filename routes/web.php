@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,7 @@ Route::get('/{any}', function () {
 // fallback
 Route::fallback(function(){
     return 'requested page not found';
+});
+Route::get('/email', function ($id) {
+    return new ContactMail();
 });

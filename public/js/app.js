@@ -22831,8 +22831,8 @@ __webpack_require__.r(__webpack_exports__);
       userEmail: null,
       fullName: null,
       contact: {
-        message: message,
-        contact: contact
+        message: null,
+        contact: null
       }
     };
   },
@@ -23354,17 +23354,34 @@ var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_19 = ["readonly"];
+var _hoisted_20 = {
+  "class": "col-12 py-2 wow fadeInUp"
+};
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-12 py-2 wow fadeInUp\"><label for=\"subject\">Subject</label><input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Enter subject..\"></div><div class=\"col-12 py-2 wow fadeInUp\"><label for=\"message\">Message</label><textarea id=\"message\" class=\"form-control\" rows=\"8\" placeholder=\"Enter Message..\"></textarea></div>", 2);
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "subject"
+}, "Subject", -1
+/* HOISTED */
+);
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_22 = {
+  "class": "col-12 py-2 wow fadeInUp"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "message"
+}, "Message", -1
+/* HOISTED */
+);
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "btn btn-primary wow zoomIn"
 }, "Send Message", -1
 /* HOISTED */
 );
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"maps-container wow fadeInUp\"><div id=\"google-maps\"></div></div><div class=\"page-section banner-home bg-image\" style=\"background-image:url(../assets/img/banner-pattern.svg);\"><div class=\"container py-5 py-lg-0\"><div class=\"row align-items-center\"><div class=\"col-lg-4 wow zoomIn\"><div class=\"img-banner d-none d-lg-block\"><img src=\"assets/img/mobile_app.png\" alt=\"\"></div></div><div class=\"col-lg-8 wow fadeInRight\"><h1 class=\"font-weight-normal mb-3\">Get easy access of all features using One Health Application</h1><a href=\"#\"><img src=\"assets/img/google_play.svg\" alt=\"\"></a><a href=\"#\" class=\"ml-2\"><img src=\"assets/img/app_store.svg\" alt=\"\"></a></div></div></div></div>", 2);
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"maps-container wow fadeInUp\"><div id=\"google-maps\"></div></div><div class=\"page-section banner-home bg-image\" style=\"background-image:url(../assets/img/banner-pattern.svg);\"><div class=\"container py-5 py-lg-0\"><div class=\"row align-items-center\"><div class=\"col-lg-4 wow zoomIn\"><div class=\"img-banner d-none d-lg-block\"><img src=\"assets/img/mobile_app.png\" alt=\"\"></div></div><div class=\"col-lg-8 wow fadeInRight\"><h1 class=\"font-weight-normal mb-3\">Get easy access of all features using One Health Application</h1><a href=\"#\"><img src=\"assets/img/google_play.svg\" alt=\"\"></a><a href=\"#\" class=\"ml-2\"><img src=\"assets/img/app_store.svg\" alt=\"\"></a></div></div></div></div>", 2);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Header = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Header");
@@ -23384,7 +23401,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })]), _hoisted_8])]), _hoisted_9]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .container ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-section ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-banner "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "contact-form mt-5",
-    onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.sendMessage && $options.sendMessage.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -23409,9 +23426,29 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Email address.."
   }, null, 8
   /* PROPS */
-  , _hoisted_19), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.userEmail]])]), _hoisted_20]), _hoisted_22], 32
+  , _hoisted_19), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.userEmail]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "subject",
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+      return $data.contact.subject = $event;
+    }),
+    "class": "form-control",
+    placeholder: "Enter subject.."
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.contact.subject]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+    id: "message",
+    "class": "form-control",
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $data.contact.message = $event;
+    }),
+    rows: "8",
+    placeholder: "Enter Message.."
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.contact.message]])])]), _hoisted_24], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  )])]), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/authenticated',[UserController::class,'authenticated']);
     Route::post('/contact',[]);
     Route::post('/logout',[UserController::class,'logout']);
+    Route::post('/contact',[ContactMail::class,'build']);
 });
 
 // common routes
