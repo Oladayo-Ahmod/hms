@@ -22827,9 +22827,16 @@ __webpack_require__.r(__webpack_exports__);
     Header: _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {};
+    return {
+      userEmail: null,
+      fullName: null
+    };
+  },
+  methods: {// send mess
   },
   beforeMount: function beforeMount() {
+    var _this = this;
+
     // check if user is authenticated
     axios__WEBPACK_IMPORTED_MODULE_2___default().get('http://localhost:8000/api/authenticated', {
       withCredentials: true,
@@ -22839,7 +22846,14 @@ __webpack_require__.r(__webpack_exports__);
     }).then(function (res) {
       console.log(res);
 
-      if (res.data.id > 0) {}
+      if (res.data.id > 0) {
+        _this.userEmail = res.data.email;
+        _this.fullName = newFunction();
+      }
+
+      function newFunction() {
+        return res.data.first_name.charAt().toUpperCase() + res.data.first_name.slice(1) + ' ' + res.data.last_name.charAt().toUpperCase() + res.data.last_name.slice(1);
+      }
     })["catch"](function (err) {
       console.log(err);
     });
@@ -23315,26 +23329,29 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_16 = {
+var _hoisted_16 = ["readonly"];
+var _hoisted_17 = {
   "class": "col-sm-6 py-2 wow fadeInRight"
 };
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "emailAddress"
 }, "Email", -1
 /* HOISTED */
 );
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-12 py-2 wow fadeInUp\"><label for=\"subject\">Subject</label><input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Enter subject..\"></div><div class=\"col-12 py-2 wow fadeInUp\"><label for=\"message\">Message</label><textarea id=\"message\" class=\"form-control\" rows=\"8\" placeholder=\"Enter Message..\"></textarea></div>", 2);
+var _hoisted_19 = ["readonly"];
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-12 py-2 wow fadeInUp\"><label for=\"subject\">Subject</label><input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Enter subject..\"></div><div class=\"col-12 py-2 wow fadeInUp\"><label for=\"message\">Message</label><textarea id=\"message\" class=\"form-control\" rows=\"8\" placeholder=\"Enter Message..\"></textarea></div>", 2);
+
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "btn btn-primary wow zoomIn"
 }, "Send Message", -1
 /* HOISTED */
 );
 
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"maps-container wow fadeInUp\"><div id=\"google-maps\"></div></div><div class=\"page-section banner-home bg-image\" style=\"background-image:url(../assets/img/banner-pattern.svg);\"><div class=\"container py-5 py-lg-0\"><div class=\"row align-items-center\"><div class=\"col-lg-4 wow zoomIn\"><div class=\"img-banner d-none d-lg-block\"><img src=\"assets/img/mobile_app.png\" alt=\"\"></div></div><div class=\"col-lg-8 wow fadeInRight\"><h1 class=\"font-weight-normal mb-3\">Get easy access of all features using One Health Application</h1><a href=\"#\"><img src=\"assets/img/google_play.svg\" alt=\"\"></a><a href=\"#\" class=\"ml-2\"><img src=\"assets/img/app_store.svg\" alt=\"\"></a></div></div></div></div>", 2);
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"maps-container wow fadeInUp\"><div id=\"google-maps\"></div></div><div class=\"page-section banner-home bg-image\" style=\"background-image:url(../assets/img/banner-pattern.svg);\"><div class=\"container py-5 py-lg-0\"><div class=\"row align-items-center\"><div class=\"col-lg-4 wow zoomIn\"><div class=\"img-banner d-none d-lg-block\"><img src=\"assets/img/mobile_app.png\" alt=\"\"></div></div><div class=\"col-lg-8 wow fadeInRight\"><h1 class=\"font-weight-normal mb-3\">Get easy access of all features using One Health Application</h1><a href=\"#\"><img src=\"assets/img/google_play.svg\" alt=\"\"></a><a href=\"#\" class=\"ml-2\"><img src=\"assets/img/app_store.svg\" alt=\"\"></a></div></div></div></div>", 2);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Header = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Header");
@@ -23360,26 +23377,28 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     id: "fullName",
+    readonly: $data.fullName !== null,
     "class": "form-control",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.fullName = $event;
+      return $data.fullName = $event;
     }),
     placeholder: "Full name.."
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.fullName]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8
+  /* PROPS */
+  , _hoisted_16), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.fullName]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     id: "emailAddress",
+    readonly: $data.userEmail !== null,
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-      return _ctx.userEmail = $event;
+      return $data.userEmail = $event;
     }),
     "class": "form-control",
     placeholder: "Email address.."
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.userEmail]])]), _hoisted_18]), _hoisted_20], 32
+  }, null, 8
+  /* PROPS */
+  , _hoisted_19), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.userEmail]])]), _hoisted_20]), _hoisted_22], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  )])]), _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }

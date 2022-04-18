@@ -22,11 +22,11 @@
         <div class="row mb-3">
           <div class="col-sm-6 py-2 wow fadeInLeft">
             <label for="fullName">Name</label>
-            <input type="text" id="fullName" class="form-control" v-model="fullName" placeholder="Full name..">
+            <input type="text" id="fullName" :readonly="fullName !== null" class="form-control" v-model="fullName" placeholder="Full name..">
           </div>
           <div class="col-sm-6 py-2 wow fadeInRight">
             <label for="emailAddress">Email</label>
-            <input type="text" id="emailAddress" v-model="userEmail" class="form-control" placeholder="Email address..">
+            <input type="text" id="emailAddress" :readonly="userEmail !== null" v-model="userEmail" class="form-control" placeholder="Email address..">
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="subject">Subject</label>
@@ -79,8 +79,12 @@ export default {
     },
     data(){
       return{
-
+        userEmail : null,
+        fullName : null
       }
+    },
+    methods : {
+      // send mess
     },
     beforeMount(){
          // check if user is authenticated
@@ -92,8 +96,13 @@ export default {
        }).then(res =>{
         console.log(res)
         if (res.data.id > 0) {
-          
+          this.userEmail = res.data.email
+          this.fullName = newFunction()
         }
+
+         function newFunction() {
+           return res.data.first_name.charAt().toUpperCase()+res.data.first_name.slice(1) + ' ' + res.data.last_name.charAt().toUpperCase()+res.data.last_name.slice(1)
+         }
       }).catch(err =>{
         console.log(err)
       })
