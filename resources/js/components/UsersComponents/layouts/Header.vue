@@ -117,7 +117,7 @@ methods : {
     this.routers = route
   }
 },
-mounted(){
+beforeMount(){
   this.currentRoute()
     axios.get('http://localhost:8000/api/authenticated',{
       withCredentials : true,

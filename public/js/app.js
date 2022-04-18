@@ -23147,7 +23147,7 @@ __webpack_require__.r(__webpack_exports__);
       this.routers = route;
     }
   },
-  mounted: function mounted() {
+  beforeMount: function beforeMount() {
     var _this = this;
 
     this.currentRoute();
