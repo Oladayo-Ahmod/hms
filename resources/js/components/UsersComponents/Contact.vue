@@ -22,11 +22,11 @@
         <div class="row mb-3">
           <div class="col-sm-6 py-2 wow fadeInLeft">
             <label for="fullName">Name</label>
-            <input type="text" id="fullName" class="form-control" placeholder="Full name..">
+            <input type="text" id="fullName" class="form-control" v-model="fullName" placeholder="Full name..">
           </div>
           <div class="col-sm-6 py-2 wow fadeInRight">
             <label for="emailAddress">Email</label>
-            <input type="text" id="emailAddress" class="form-control" placeholder="Email address..">
+            <input type="text" id="emailAddress" v-model="userEmail" class="form-control" placeholder="Email address..">
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="subject">Subject</label>
@@ -77,11 +77,26 @@ export default {
         Footer,
         Header
     },
-    methods : {
-      // check if user is authenticated
-      axios.get('http://localhost:8000/api/session')
-      // submit form
+    data(){
+      return{
 
+      }
+    },
+    beforeMount(){
+         // check if user is authenticated
+       axios.get('http://localhost:8000/api/authenticated',{
+         withCredentials : true,
+         headers : {
+           Authorization : 'Bearer ' + localStorage.getItem('loginToken')
+         }
+       }).then(res =>{
+        console.log(res)
+        if (res.data.id > 0) {
+          
+        }
+      }).catch(err =>{
+        console.log(err)
+      })
     }
 }
 </script>

@@ -22806,9 +22806,45 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/UsersComponents/Contact.vue?vue&type=script&lang=js ***!
   \*****************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/resources/js/components/UsersComponents/Contact.vue: Unexpected token, expected \",\" (14:11)\n\n\u001b[0m \u001b[90m 12 |\u001b[39m     methods \u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m       \u001b[90m// check if user is authenticated\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m       axios\u001b[33m.\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m       \u001b[90m// submit form\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m     }\u001b[0m\n    at instantiate (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:72:32)\n    at constructor (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:358:12)\n    at Parser.raise (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:3334:19)\n    at Parser.unexpected (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:3372:16)\n    at Parser.expect (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:4001:28)\n    at Parser.parseObjectLike (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:13509:14)\n    at Parser.parseExprAtom (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:12917:23)\n    at Parser.parseExprSubscripts (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:12567:23)\n    at Parser.parseUpdate (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:12546:21)\n    at Parser.parseMaybeUnary (/media/olalekan/7890CD7590CD3B001/xampp/htdocs/hospital/node_modules/@babel/parser/lib/index.js:12517:23)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/Footer.vue */ "./resources/js/components/UsersComponents/layouts/Footer.vue");
+/* harmony import */ var _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/Header.vue */ "./resources/js/components/UsersComponents/layouts/Header.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Contact",
+  components: {
+    Footer: _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Header: _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {};
+  },
+  beforeMount: function beforeMount() {
+    // check if user is authenticated
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get('http://localhost:8000/api/authenticated', {
+      withCredentials: true,
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('loginToken')
+      }
+    }).then(function (res) {
+      console.log(res);
+
+      if (res.data.id > 0) {}
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  }
+});
 
 /***/ }),
 
@@ -23266,13 +23302,41 @@ var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row mb-3\"><div class=\"col-sm-6 py-2 wow fadeInLeft\"><label for=\"fullName\">Name</label><input type=\"text\" id=\"fullName\" class=\"form-control\" placeholder=\"Full name..\"></div><div class=\"col-sm-6 py-2 wow fadeInRight\"><label for=\"emailAddress\">Email</label><input type=\"text\" id=\"emailAddress\" class=\"form-control\" placeholder=\"Email address..\"></div><div class=\"col-12 py-2 wow fadeInUp\"><label for=\"subject\">Subject</label><input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Enter subject..\"></div><div class=\"col-12 py-2 wow fadeInUp\"><label for=\"message\">Message</label><textarea id=\"message\" class=\"form-control\" rows=\"8\" placeholder=\"Enter Message..\"></textarea></div></div><button type=\"submit\" class=\"btn btn-primary wow zoomIn\">Send Message</button>", 2);
+var _hoisted_13 = {
+  "class": "row mb-3"
+};
+var _hoisted_14 = {
+  "class": "col-sm-6 py-2 wow fadeInLeft"
+};
 
-var _hoisted_15 = [_hoisted_13];
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "fullName"
+}, "Name", -1
+/* HOISTED */
+);
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"maps-container wow fadeInUp\"><div id=\"google-maps\"></div></div><div class=\"page-section banner-home bg-image\" style=\"background-image:url(../assets/img/banner-pattern.svg);\"><div class=\"container py-5 py-lg-0\"><div class=\"row align-items-center\"><div class=\"col-lg-4 wow zoomIn\"><div class=\"img-banner d-none d-lg-block\"><img src=\"assets/img/mobile_app.png\" alt=\"\"></div></div><div class=\"col-lg-8 wow fadeInRight\"><h1 class=\"font-weight-normal mb-3\">Get easy access of all features using One Health Application</h1><a href=\"#\"><img src=\"assets/img/google_play.svg\" alt=\"\"></a><a href=\"#\" class=\"ml-2\"><img src=\"assets/img/app_store.svg\" alt=\"\"></a></div></div></div></div>", 2);
+var _hoisted_16 = {
+  "class": "col-sm-6 py-2 wow fadeInRight"
+};
 
-function render(_ctx, _cache) {
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "emailAddress"
+}, "Email", -1
+/* HOISTED */
+);
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-12 py-2 wow fadeInUp\"><label for=\"subject\">Subject</label><input type=\"text\" id=\"subject\" class=\"form-control\" placeholder=\"Enter subject..\"></div><div class=\"col-12 py-2 wow fadeInUp\"><label for=\"message\">Message</label><textarea id=\"message\" class=\"form-control\" rows=\"8\" placeholder=\"Enter Message..\"></textarea></div>", 2);
+
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn btn-primary wow zoomIn"
+}, "Send Message", -1
+/* HOISTED */
+);
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"maps-container wow fadeInUp\"><div id=\"google-maps\"></div></div><div class=\"page-section banner-home bg-image\" style=\"background-image:url(../assets/img/banner-pattern.svg);\"><div class=\"container py-5 py-lg-0\"><div class=\"row align-items-center\"><div class=\"col-lg-4 wow zoomIn\"><div class=\"img-banner d-none d-lg-block\"><img src=\"assets/img/mobile_app.png\" alt=\"\"></div></div><div class=\"col-lg-8 wow fadeInRight\"><h1 class=\"font-weight-normal mb-3\">Get easy access of all features using One Health Application</h1><a href=\"#\"><img src=\"assets/img/google_play.svg\" alt=\"\"></a><a href=\"#\" class=\"ml-2\"><img src=\"assets/img/app_store.svg\" alt=\"\"></a></div></div></div></div>", 2);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Header = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Header");
 
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
@@ -23290,12 +23354,32 @@ function render(_ctx, _cache) {
 
   })]), _hoisted_8])]), _hoisted_9]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .container ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-section ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-banner "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "contact-form mt-5",
-    onSubmit: _cache[0] || (_cache[0] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return _ctx.sendMessage && _ctx.sendMessage.apply(_ctx, arguments);
     }, ["prevent"]))
-  }, _hoisted_15, 32
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "fullName",
+    "class": "form-control",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return _ctx.fullName = $event;
+    }),
+    placeholder: "Full name.."
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.fullName]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "emailAddress",
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+      return _ctx.userEmail = $event;
+    }),
+    "class": "form-control",
+    placeholder: "Email address.."
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.userEmail]])]), _hoisted_18]), _hoisted_20], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  )])]), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-home "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }
