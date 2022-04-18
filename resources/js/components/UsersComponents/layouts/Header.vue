@@ -119,7 +119,7 @@ methods : {
 },
 mounted(){
   this.currentRoute()
-    axios.get('http://localhost:8000/api/user',{
+    axios.get('http://localhost:8000/api/authenticated',{
       withCredentials : true,
       headers : {
         Authorization   : 'Bearer '+ localStorage.getItem('loginToken'),
