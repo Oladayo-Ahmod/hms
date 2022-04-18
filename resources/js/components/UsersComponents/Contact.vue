@@ -80,11 +80,26 @@ export default {
     data(){
       return{
         userEmail : null,
-        fullName : null
+        fullName : null,
+        contact : {
+          message,
+          contact
+        }
       }
     },
     methods : {
-      // send mess
+      // send message
+     sendMessage(){
+       axios.post('http://localhost:8000/api/contact',this.contact,{
+         withCredentials : true,
+         headers : {
+           Authorization : 'Bearer ' + localStorage.getItem('loginToken')
+         }
+      }).then(res =>{
+        console.log(res)
+      })
+     }
+      
     },
     beforeMount(){
          // check if user is authenticated
@@ -94,7 +109,6 @@ export default {
            Authorization : 'Bearer ' + localStorage.getItem('loginToken')
          }
        }).then(res =>{
-        console.log(res)
         if (res.data.id > 0) {
           this.userEmail = res.data.email
           this.fullName = newFunction()

@@ -22829,10 +22829,25 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       userEmail: null,
-      fullName: null
+      fullName: null,
+      contact: {
+        message: message,
+        contact: contact
+      }
     };
   },
-  methods: {// send mess
+  methods: {
+    // send message
+    sendMessage: function sendMessage() {
+      axios__WEBPACK_IMPORTED_MODULE_2___default().post('http://localhost:8000/api/contact', this.contact, {
+        withCredentials: true,
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('loginToken')
+        }
+      }).then(function (res) {
+        console.log(res);
+      });
+    }
   },
   beforeMount: function beforeMount() {
     var _this = this;
@@ -22844,8 +22859,6 @@ __webpack_require__.r(__webpack_exports__);
         Authorization: 'Bearer ' + localStorage.getItem('loginToken')
       }
     }).then(function (res) {
-      console.log(res);
-
       if (res.data.id > 0) {
         _this.userEmail = res.data.email;
         _this.fullName = newFunction();
@@ -23372,7 +23385,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   })]), _hoisted_8])]), _hoisted_9]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .container ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .banner-section ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .page-banner "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "contact-form mt-5",
     onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
-      return _ctx.sendMessage && _ctx.sendMessage.apply(_ctx, arguments);
+      return $options.sendMessage && $options.sendMessage.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
