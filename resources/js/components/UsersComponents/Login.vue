@@ -30,7 +30,7 @@
                
              </div>
                <form class="form-group" @submit.prevent="login"  action="" method="post">
-                 @csrf
+
                     <label for="">Email</label>
                    <input type="email" class="form-control" v-model="form.email" >
                    <label for="">Password</label>
@@ -41,7 +41,6 @@
                    </div>
                </form>
                <!-- {{username}} -->
-               <button @click="getSession">session</button>
            </div>
         </div>
     </div>
@@ -85,23 +84,26 @@ export default {
             this.message.error[0] = 'email is missing' // check password
           }
           else{
-            axios.post('http://localhost:8001/api/login',this.form).then(
+            axios.post('http://localhost:8000/api/login',this.form).then(
               response =>{
-                  console.log(response)
+                console.log(response)
                if (response.data.error) {
                  this.message.success = '' //set success message to empty
-                 Object.keys(response.data.error).forEach(e =>{
-                   this.message.error = response.data.error[e]
-                   
-                 })
+                 this.message.error[0] = response.data.error
                }
                else if(response.data.success){
                  this.message.error = '' // set error message to empty
-                //  console.log(response.data.success)
+                 console.log(response.data)
                   this.message.success = response.data.success
                   this.loginState.login = true
                   this.loginState.firstName = response.data.firstName
-                  console.log(this.loginState)
+                  localStorage.setItem('loginToken',response.data.token)
+                  setTimeout(() => {
+                    this.message.success = 'redirecting ...'
+                  }, 1500);
+                  setTimeout(() => {
+                    this.$router.push('/home')
+                  }, 2500);
                }
 
               }
@@ -111,11 +113,6 @@ export default {
             })
           }
         },
-        getSession(){
-          axios.get('http://localhost:8001/api/session').then(response =>{
-            console.log(response)
-          })
-        }
         
     },
   mounted(){

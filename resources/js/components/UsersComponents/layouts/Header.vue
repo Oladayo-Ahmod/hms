@@ -70,10 +70,10 @@
               </router-link>
             </li>
             <li class="nav-item">
-               <div class="dropdown" v-if="state">
+               <div class="dropdown" v-if="state.id !== null && state.id !== ''">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
                               aria-expanded="false">
-                              {{state}}
+                              {{state.firstName}}
                       </button>
                       <div class="dropdown-menu" aria-labelledby="triggerId">
                            <router-link to="/logout" class="dropdown-item"> 
@@ -100,23 +100,39 @@
 <script>
 import {useRoute} from 'vue-router'
 export default {
-props : ['state'],
 name : "Header",
 data(){
   return{
     routers : '',
+    state : {
+      firstName : null,
+      login : false,
+      id : null
+    },
   }
 },
 methods : {
   currentRoute(){
     let route = useRoute().name;
     this.routers = route
-    console.log(this.routers)
   }
 },
 mounted(){
   this.currentRoute()
-},
+    axios.get('http://localhost:8000/api/user',{
+      withCredentials : true,
+      headers : {
+        Authorization   : 'Bearer '+ localStorage.getItem('loginToken'),
+      }
+    }).then(res=>{
+      if (res.data.id) {
+        this.state.firstName = res.data.first_name
+        this.state.id = res.data.id
+        this.state.login = true
+      }
+     
+    })
+  }
 }
 </script>
 

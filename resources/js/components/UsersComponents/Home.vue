@@ -295,6 +295,7 @@
 <script>
 import Header from './layouts/Header'
 import Footer from './layouts/Footer'
+import axios from 'axios'
     export default {
         name : "home",
         components : {
@@ -303,6 +304,7 @@ import Footer from './layouts/Footer'
         },
         mounted() {
             console.log('Component mounted.')
-        }
+        },
+        
     }
 </script>

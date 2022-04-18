@@ -22865,6 +22865,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _layouts_Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/Header */ "./resources/js/components/UsersComponents/layouts/Header.vue");
 /* harmony import */ var _layouts_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/Footer */ "./resources/js/components/UsersComponents/layouts/Footer.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -22930,34 +22933,33 @@ __webpack_require__.r(__webpack_exports__);
       } else if (this.form.email == '') {
         this.message.error[0] = 'email is missing'; // check password
       } else {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8001/api/login', this.form).then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://localhost:8000/api/login', this.form).then(function (response) {
           console.log(response);
 
           if (response.data.error) {
             _this.message.success = ''; //set success message to empty
 
-            Object.keys(response.data.error).forEach(function (e) {
-              _this.message.error = response.data.error[e];
-            });
+            _this.message.error[0] = response.data.error;
           } else if (response.data.success) {
             _this.message.error = ''; // set error message to empty
-            //  console.log(response.data.success)
 
+            console.log(response.data);
             _this.message.success = response.data.success;
             _this.loginState.login = true;
             _this.loginState.firstName = response.data.firstName;
-            console.log(_this.loginState);
+            localStorage.setItem('loginToken', response.data.token);
+            setTimeout(function () {
+              _this.message.success = 'redirecting ...';
+            }, 1500);
+            setTimeout(function () {
+              _this.$router.push('/home');
+            }, 2500);
           }
         })["catch"](function (errors) {
           // this.message.error = errors.error.email
           console.log(errors);
         });
       }
-    },
-    getSession: function getSession() {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:8001/api/session').then(function (response) {
-        console.log(response);
-      });
     }
   },
   mounted: function mounted() {// this.currentRoute();
@@ -23033,10 +23035,10 @@ __webpack_require__.r(__webpack_exports__);
           } else if (response.data.success) {
             _this.message.error = ''; // set error message to empty
 
-            _this.message.success = response.data.success;
+            _this.message.success = response.data.success + 'redirecting ...';
             setTimeout(function () {
               _this.$router.push('/login');
-            }, 2000);
+            }, 2500);
           }
         })["catch"](function (errors) {
           // this.message.error = errors.error.email
@@ -23080,22 +23082,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['state'],
   name: "Header",
   data: function data() {
     return {
-      routers: ''
+      routers: '',
+      state: {
+        firstName: null,
+        login: false,
+        id: null
+      }
     };
   },
   methods: {
     currentRoute: function currentRoute() {
       var route = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.useRoute)().name;
       this.routers = route;
-      console.log(this.routers);
     }
   },
   mounted: function mounted() {
+    var _this = this;
+
     this.currentRoute();
+    axios.get('http://localhost:8000/api/user', {
+      withCredentials: true,
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('loginToken')
+      }
+    }).then(function (res) {
+      if (res.data.id) {
+        _this.state.firstName = res.data.first_name;
+        _this.state.id = res.data.id;
+        _this.state.login = true;
+      }
+    });
   }
 });
 
@@ -23465,28 +23484,26 @@ var _hoisted_17 = {
   "class": "alert alert-success"
 };
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" @csrf ");
-
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": ""
 }, "Email", -1
 /* HOISTED */
 );
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": ""
 }, "Password", -1
 /* HOISTED */
 );
 
-var _hoisted_21 = {
+var _hoisted_20 = {
   "class": "d-flex",
   style: {
     "justify-content": "space-between"
   }
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "my-4 text-sm"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Not yet registered? "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "/register"
@@ -23531,7 +23548,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, ["prevent"])),
     action: "",
     method: "post"
-  }, [_hoisted_18, _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "email",
     "class": "form-control",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
@@ -23539,7 +23556,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]]), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.email]]), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     "class": "form-control",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
@@ -23547,19 +23564,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[2] || (_cache[2] = function () {
       return $options.login && $options.login.apply($options, arguments);
     }),
     type: "button",
     "class": "btn btn-primary my-3"
-  }, "Login"), _hoisted_22])], 32
+  }, "Login"), _hoisted_21])], 32
   /* HYDRATE_EVENTS */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" {{username}} "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[4] || (_cache[4] = function () {
-      return $options.getSession && $options.getSession.apply($options, arguments);
-    })
-  }, "session")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" {{username}} ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -23956,7 +23969,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_19, [$props.state ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.state), 1
+  , ["class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_19, [$data.state.id !== null && $data.state.id !== '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.state.firstName), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/logout",

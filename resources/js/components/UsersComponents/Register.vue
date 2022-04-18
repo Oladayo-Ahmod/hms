@@ -109,10 +109,10 @@ export default {
                }
                else if(response.data.success){
                  this.message.error = '' // set error message to empty
-                  this.message.success = response.data.success
+                  this.message.success = response.data.success + 'redirecting ...'
                  setTimeout(()=>{
                    this.$router.push('/login')
-                 },2000);
+                 },2500);
 
                }
 
