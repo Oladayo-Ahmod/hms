@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 //  protected pages
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user',[UserController::class,'session']);
+    Route::get('/authenticated',[UserController::class,'authenticated']);
     Route::post('/logout',[UserController::class,'logout']);
 });
 
