@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Repositories\UserRepository;
-use Laravel\Sanctum\Sanctum;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Session;
@@ -34,15 +32,16 @@ class UserController extends Controller
         return response()->json($data);
     }
 
-    public function session(Request $request){
+    // check if user is authenticated
+    public function authenticated(){
      $user = auth()->user();
      if ($user) {
          # code...
-        return response()->json($user);
+        return response()->json($user,200);
 
      }
      else{
-        return response()->json('damn');
+        return response()->json('unauthenticated',401);
 
      }
     }
@@ -102,20 +101,11 @@ class UserController extends Controller
         }
         // check for the credentials
         else{
-            // $user = User::where('email', '=', $request->email)->first();
-            // if (Hash::check($request->password, $user['password'])) {
-            //     Session::put('user', $user);               
-            //     return response()->json(['success'=>'loggedin','firstName'=>$user->first_name,'token'=>$user->createToken('tokens')->plainTextToken]);
-            // }
-            // else{
-            //     return response()->json(['error'=>'incorrect email or password']);
+            if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+                # code...
+                return response()->json(['error'=>'credentials not found']);
 
-            // }
-                if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                    # code...
-                    return response()->json(['error'=>'credentials not found']);
-
-                }
+            }
             return response()->json(['success'=> 'success', 'token'=> auth()->user()->createToken('tokens')->plainTextToken]);
 
         }
